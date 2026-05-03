@@ -1,7 +1,7 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import type { Metadata } from 'next'
-import { ArrowUpRight, Brain, Droplet, FlaskConical, HeartPulse, Moon, Scale, Sparkles, Zap, ShieldCheck } from 'lucide-react'
-import { PageHero } from '@/components/site/page-hero'
+import { ArrowUpRight, ArrowRight, Brain, Calendar, Droplet, FlaskConical, HeartPulse, Moon, Scale, Sparkles, Zap, ShieldCheck } from 'lucide-react'
 import { Section, SectionHeading, NumberedTag } from '@/components/site/section'
 import { FaqAccordion } from '@/components/site/faq-accordion'
 
@@ -14,26 +14,7 @@ export const metadata: Metadata = {
 export default function HormoneTherapyPage() {
   return (
     <>
-      <PageHero
-        eyebrow="Hormone Therapy · BHRT"
-        title={<>Restore <em className="not-italic text-sage">balance</em>. Reclaim energy.</>}
-        subtitle={
-          <>
-            Physician-guided evaluation and management of hormone-related conditions in both men and
-            women, focused on improving energy, mood, metabolic function, and overall well-being.
-            Care is grounded in clinical assessment and laboratory data.
-          </>
-        }
-        primary={{ href: '/book?type=hormone', label: 'Book Initial Consultation' }}
-        secondary={{ href: '/programs#hormone', label: 'Start Hormone Therapy Program' }}
-        meta={[
-          { label: 'Initial Consult', value: '$295' },
-          { label: 'Follow-Up', value: '$195' },
-          { label: 'Program Total', value: '$725' },
-          { label: 'Per-Visit (Program)', value: '$145' },
-        ]}
-        variant="sage"
-      />
+      <HormoneHero />
 
       {/* Overview */}
       <Section bg="bone">
@@ -300,7 +281,10 @@ export default function HormoneTherapyPage() {
         <div className="container-velora py-24 md:py-28 grid lg:grid-cols-12 gap-10 items-center">
           <div className="lg:col-span-7">
             <span className="eyebrow text-gold">Start Your Care</span>
-            <h2 className="mt-5 font-display text-[40px] md:text-[58px] leading-[1.04] tracking-[-0.018em] text-cream">
+            <h2
+              className="mt-5 font-display leading-[1.04] tracking-[-0.018em] text-cream"
+              style={{ fontSize: 'clamp(2rem, 5.5vw, 3.625rem)' }}
+            >
               Begin physician-guided <em className="not-italic text-gold">hormone therapy</em>.
             </h2>
           </div>
@@ -316,5 +300,106 @@ export default function HormoneTherapyPage() {
         </div>
       </section>
     </>
+  )
+}
+
+/* ──────────────────────────────────────────────
+   Hormone Therapy hero — product-led, design 1
+   ────────────────────────────────────────────── */
+function HormoneHero() {
+  return (
+    <section className="relative overflow-hidden bg-ink text-cream">
+      {/* Warm background — espresso + gold light beam, matches product photo lighting */}
+      <div className="absolute inset-0 bg-[linear-gradient(115deg,#1A140E_0%,#2A1F14_55%,#3A2C1B_100%)]" />
+      <div
+        className="absolute -top-32 -left-20 w-[1100px] h-[700px] -z-0 rotate-[18deg] opacity-50 pointer-events-none"
+        style={{
+          background:
+            'linear-gradient(100deg, rgba(255,220,160,0.55) 0%, rgba(255,200,130,0.25) 35%, rgba(255,200,130,0) 70%)',
+          filter: 'blur(60px)',
+        }}
+        aria-hidden
+      />
+
+      <div className="relative container-velora pt-28 sm:pt-32 lg:pt-40 pb-14 sm:pb-16 lg:pb-24">
+        <div className="grid lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-16 items-center">
+          {/* Copy */}
+          <div>
+            <p className="text-[11px] tracking-[0.32em] sm:tracking-[0.36em] uppercase text-gold font-semibold">
+              Hormone Therapy · BHRT
+            </p>
+
+            <h1
+              className="mt-6 font-display leading-[1.0] tracking-[-0.02em] text-cream"
+              style={{ fontSize: 'clamp(2.125rem, 6.5vw, 4.75rem)' }}
+            >
+              Restore <span className="text-gold">balance.</span>
+              <br />
+              Reclaim <span className="text-gold">energy.</span>
+            </h1>
+
+            <div className="mt-7 w-24 h-px bg-gold" />
+
+            <p className="mt-7 max-w-xl text-[15.5px] leading-[1.7] text-cream/75">
+              Physician-guided evaluation and management of hormone-related conditions in both men and
+              women, focused on improving energy, mood, metabolic function, and overall well-being.
+              Care is grounded in clinical assessment and laboratory data.
+            </p>
+
+            <div className="mt-9 flex flex-wrap gap-3">
+              <Link
+                href="/book?type=hormone"
+                className="inline-flex items-center gap-2.5 bg-gold text-ink px-5 sm:px-7 py-3.5 sm:py-4 text-[11px] sm:text-[12px] tracking-[0.24em] sm:tracking-[0.28em] uppercase font-semibold hover:bg-cream transition-colors rounded-md"
+              >
+                <Calendar className="size-4" strokeWidth={1.8} />
+                Book Initial Consultation
+              </Link>
+              <Link
+                href="/programs#hormone"
+                className="inline-flex items-center gap-2.5 border border-gold/60 text-gold px-5 sm:px-7 py-3.5 sm:py-4 text-[11px] sm:text-[12px] tracking-[0.24em] sm:tracking-[0.28em] uppercase font-semibold hover:bg-gold hover:text-ink transition-colors rounded-md"
+              >
+                Hormone Therapy Program
+                <ArrowRight className="size-4" strokeWidth={1.8} />
+              </Link>
+            </div>
+
+            {/* Pricing strip */}
+            <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-x-6 gap-y-4 pt-7 border-t border-cream/15">
+              <PriceTag label="Initial Consult" value="$295" />
+              <PriceTag label="Follow-Up" value="$195" />
+              <PriceTag label="Program Total" value="$725" />
+              <PriceTag label="Per Visit (Program)" value="$145" />
+            </div>
+          </div>
+
+          {/* Product photo */}
+          <div className="relative">
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-[0_30px_80px_-20px_rgba(0,0,0,0.6)]">
+              <Image
+                src="/hormone-therapy-product.png"
+                alt="Velora Hormone Therapy — personalized hormone care kit"
+                fill
+                priority
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                className="object-cover"
+              />
+            </div>
+            {/* Caption */}
+            <p className="mt-5 text-center text-[10.5px] tracking-[0.28em] uppercase text-gold/80">
+              Personalized · Physician-Directed · Long-Term
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function PriceTag({ label, value }: { label: string; value: string }) {
+  return (
+    <div>
+      <p className="text-[10px] tracking-[0.22em] uppercase text-gold/80">{label}</p>
+      <p className="mt-1.5 font-display text-[22px] text-cream leading-none">{value}</p>
+    </div>
   )
 }

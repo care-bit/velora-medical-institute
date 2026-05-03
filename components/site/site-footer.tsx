@@ -29,11 +29,14 @@ export function SiteFooter() {
         <div className="container-velora py-14 grid lg:grid-cols-[1.4fr_1fr] gap-10 items-end">
           <div>
             <p className="eyebrow text-gold mb-5">Begin Your Care</p>
-            <h2 className="font-display text-4xl md:text-5xl text-cream leading-[1.05] tracking-[-0.015em]">
+            <h2
+              className="font-display text-cream leading-[1.05] tracking-[-0.015em]"
+              style={{ fontSize: 'clamp(1.75rem, 4.2vw, 3rem)' }}
+            >
               Physician-guided care, <em className="not-italic text-gold/95">designed for you.</em>
             </h2>
           </div>
-          <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-3">
+          <div className="flex flex-col sm:flex-row gap-3">
             <Link
               href="/book?type=weight"
               className="btn bg-cream text-ink hover:bg-gold hover:text-ink px-6 py-3.5 flex-1"
@@ -61,19 +64,19 @@ export function SiteFooter() {
             Direct-pay, telemedicine-based practice led by double board-certified physicians.
           </p>
           <ul className="mt-7 space-y-3 text-[13px] text-cream/70">
-            <li className="flex items-start gap-2.5">
+            <li className="flex items-start gap-2.5 min-w-0">
               <Mail className="size-4 mt-0.5 text-gold/80 shrink-0" />
-              <a href="mailto:care@veloramedical.com" className="hover:text-gold transition-colors">
+              <a href="mailto:care@veloramedical.com" className="hover:text-gold transition-colors break-all">
                 care@veloramedical.com
               </a>
             </li>
-            <li className="flex items-start gap-2.5">
+            <li className="flex items-start gap-2.5 min-w-0">
               <Phone className="size-4 mt-0.5 text-gold/80 shrink-0" />
               <a href="tel:+18335835672" className="hover:text-gold transition-colors">
                 (833) 583-5672
               </a>
             </li>
-            <li className="flex items-start gap-2.5">
+            <li className="flex items-start gap-2.5 min-w-0">
               <MapPin className="size-4 mt-0.5 text-gold/80 shrink-0" />
               <span>Telemedicine practice — licensed in select states</span>
             </li>
@@ -89,7 +92,7 @@ export function SiteFooter() {
       <div className="border-t border-cream/10">
         <div className="container-velora py-7 flex flex-col md:flex-row gap-4 items-start md:items-center justify-between text-[11px] tracking-[0.14em] uppercase text-cream/50">
           <p>© {new Date().getFullYear()} Velora Medical Institute · All rights reserved</p>
-          <p className="normal-case tracking-normal text-[11.5px] max-w-xl text-right">
+          <p className="normal-case tracking-normal text-[11.5px] max-w-xl md:text-right">
             The content on this website is for informational purposes and is not a substitute for medical
             advice, diagnosis, or treatment. Individual results vary.
           </p>
