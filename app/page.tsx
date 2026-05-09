@@ -42,19 +42,19 @@ export default function HomePage() {
           <div className="mt-12 grid md:grid-cols-3 gap-8 lg:gap-10">
             <ServiceCard
               href="/weight-management"
-              photo="/photos/card-weight.png"
+              photo="https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&w=1600&q=80"
               title="Weight Management"
               body="Physician-guided GLP-1 therapy and medical optimization programs to help you lose weight, improve metabolism, and sustain long-term results."
             />
             <ServiceCard
               href="/hormone-therapy"
-              photo="/photos/card-hormone.png"
+              photo="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=1600&q=80"
               title="Hormone Optimization"
               body="Restore balance, improve energy, enhance mood, and support overall hormonal health through personalized hormone therapy."
             />
             <ServiceCard
               href="/longevity"
-              photo="/photos/card-longevity.png"
+              photo="https://images.unsplash.com/photo-1502323777036-f29e3972d82f?auto=format&fit=crop&w=1600&q=80"
               title="Longevity & Preventive Medicine"
               body="Proactive, personalized strategies to optimize health, prevent disease, and support long-term vitality."
             />

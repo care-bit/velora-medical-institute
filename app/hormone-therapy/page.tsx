@@ -65,8 +65,8 @@ export default function HormoneTherapyPage() {
             </div>
             <div className="relative aspect-[4/3] rounded-md overflow-hidden">
               <Image
-                src="/photos/hormone-hero.png"
-                alt="A smiling couple with the Velora Hormone Optimization product on a table"
+                src="https://images.unsplash.com/photo-1518349619113-03114f06ac3a?auto=format&fit=crop&w=1600&q=80"
+                alt="A smiling middle-aged couple together at home in warm natural light"
                 fill
                 priority
                 sizes="(min-width: 1024px) 50vw, 100vw"

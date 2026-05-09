@@ -47,8 +47,8 @@ export default function ProgramsPage() {
             <div className="relative">
               <div className="relative aspect-[4/3] rounded-md overflow-hidden">
                 <Image
-                  src="/photos/programs-hikers.png"
-                  alt="A patient and his physician hiking — one helping the other up the mountain at sunset"
+                  src="https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=1600&q=80"
+                  alt="Two hikers on a mountain at golden hour, one helping the other up"
                   fill
                   priority
                   sizes="(min-width: 1024px) 50vw, 100vw"

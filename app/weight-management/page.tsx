@@ -64,8 +64,8 @@ export default function WeightManagementPage() {
             </div>
             <div className="relative aspect-[4/3] rounded-md overflow-hidden">
               <Image
-                src="/photos/wm-hero.png"
-                alt="A patient holding a Velora weight loss kit"
+                src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1600&q=80"
+                alt="A confident woman in athletic wear smiling in soft natural light"
                 fill
                 priority
                 sizes="(min-width: 1024px) 50vw, 100vw"

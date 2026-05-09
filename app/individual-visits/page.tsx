@@ -60,8 +60,8 @@ export default function IndividualVisitsPage() {
             </div>
             <div className="relative aspect-[4/3] rounded-md overflow-hidden">
               <Image
-                src="/photos/individual-hero.png"
-                alt="A patient on a Velora telehealth follow-up visit"
+                src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=1600&q=80"
+                alt="A woman at her desk on a video call with a laptop in a warm home interior"
                 fill
                 priority
                 sizes="(min-width: 1024px) 50vw, 100vw"
