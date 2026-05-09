@@ -384,6 +384,39 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* MEET OUR PHYSICIANS — homepage feature */}
+      <section className="bg-bone">
+        <div className="container-velora py-16 lg:py-20">
+          <div className="text-center max-w-3xl mx-auto">
+            <p className="text-[10.5px] tracking-[0.32em] uppercase text-brown font-semibold">
+              Meet Our Physicians
+            </p>
+            <h2
+              className="mt-4 font-display leading-[1.05] tracking-[-0.018em] text-ink"
+              style={{ fontSize: 'clamp(1.625rem, 3.4vw, 2.5rem)' }}
+            >
+              Care directed by double board-certified physicians.
+            </h2>
+            <div className="mt-5 mx-auto w-12 h-px bg-gold" />
+          </div>
+
+          <div className="mt-12 grid md:grid-cols-2 gap-6 lg:gap-8">
+            <PhysicianCard
+              photo="/dr-amini.png"
+              name="Afshin Amini, MD"
+              credentials="Internal Medicine · Obesity Medicine"
+              bio="Dr. Amini focuses on metabolic health, weight management, and hormone therapy — providing individualized, physician-directed care grounded in clinical assessment and continuous monitoring."
+            />
+            <PhysicianCard
+              photo="/dr-tolebeyan.jpeg"
+              name="Amirseena Tolebeyan, MD"
+              credentials="Internal Medicine · Obesity Medicine"
+              bio="Dr. Tolebeyan focuses on hormone optimization, metabolic syndrome, and weight management — delivering structured, evidence-based care explained at every step."
+            />
+          </div>
+        </div>
+      </section>
+
       {/* FINAL CTA — brown panel */}
       <section className="bg-bone">
         <div className="container-velora py-16">
@@ -472,6 +505,41 @@ function Differentiator({
       <div>
         <p className="text-[10.5px] tracking-[0.22em] uppercase text-ink font-semibold">{title}</p>
         <p className="mt-1 text-[12.5px] text-ink-soft leading-[1.5]">{body}</p>
+      </div>
+    </div>
+  )
+}
+
+function PhysicianCard({
+  photo, name, credentials, bio,
+}: { photo: string; name: string; credentials: string; bio: string }) {
+  return (
+    <div className="bg-paper border border-line/60 rounded-2xl p-6 lg:p-8 flex flex-col sm:flex-row gap-6 items-start">
+      <div className="relative w-full sm:w-[180px] aspect-[4/5] sm:aspect-[4/5] rounded-md overflow-hidden bg-bone shrink-0">
+        <Image
+          src={photo}
+          alt={name}
+          fill
+          sizes="(min-width: 640px) 180px, 100vw"
+          className="object-cover"
+          style={{ objectPosition: 'center 18%' }}
+        />
+      </div>
+      <div className="flex-1 flex flex-col">
+        <h3 className="font-display text-[24px] md:text-[26px] leading-tight text-ink">
+          {name}
+        </h3>
+        <p className="mt-2 text-[10.5px] tracking-[0.24em] uppercase text-brown font-semibold">
+          {credentials}
+        </p>
+        <p className="mt-4 text-[14.5px] text-ink-soft leading-[1.6]">{bio}</p>
+        <Link
+          href="/physicians"
+          className="mt-5 inline-flex items-center gap-1.5 text-brown hover:text-brown-deep text-[11px] tracking-[0.24em] uppercase font-semibold border-b border-brown/30 pb-1 self-start transition-colors"
+        >
+          Read More
+          <ArrowRight className="size-3.5" />
+        </Link>
       </div>
     </div>
   )

@@ -17,7 +17,7 @@ export default function IntakePage() {
             className="mt-4 font-display leading-[1.04] tracking-[-0.018em] text-ink max-w-3xl"
             style={{ fontSize: 'clamp(2rem, 5.5vw, 4.25rem)' }}
           >
-            A few details before your <em className="not-italic text-sage">first visit</em>.
+            A few details before your <em className="not-italic text-brown">first visit</em>.
           </h1>
           <p className="mt-6 text-[16.5px] text-ink-soft max-w-2xl leading-relaxed">
             This intake provides your physician with the medical, family, and lifestyle context needed

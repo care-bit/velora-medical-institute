@@ -70,10 +70,10 @@ export function PageHero({
               <div className="mt-9 flex flex-wrap gap-3">
                 {primary && (
                   <Link href={primary.href} className={cn(
-                    'btn px-6 py-3.5',
+                    'inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-md text-[11px] tracking-[0.24em] uppercase font-semibold transition-colors',
                     inverted
-                      ? 'bg-cream text-ink hover:bg-gold'
-                      : 'bg-ink text-cream hover:bg-sage-deep',
+                      ? 'bg-cream text-brown hover:bg-paper'
+                      : 'bg-brown text-cream hover:bg-brown-deep',
                   )}>
                     {primary.label}
                     <ArrowUpRight className="size-3.5" />
@@ -81,10 +81,10 @@ export function PageHero({
                 )}
                 {secondary && (
                   <Link href={secondary.href} className={cn(
-                    'btn px-6 py-3.5 border',
+                    'inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-md text-[11px] tracking-[0.24em] uppercase font-semibold transition-colors border',
                     inverted
                       ? 'border-cream/30 text-cream hover:bg-cream hover:text-ink'
-                      : 'border-ink/80 text-ink hover:bg-ink hover:text-cream',
+                      : 'border-ink text-ink hover:bg-ink hover:text-cream',
                   )}>
                     {secondary.label}
                   </Link>
@@ -102,7 +102,7 @@ export function PageHero({
                   <li key={m.label} className="flex items-baseline justify-between gap-4">
                     <span className={cn(
                       'text-[10.5px] tracking-[0.22em] uppercase',
-                      inverted ? 'text-gold/80' : 'text-sage',
+                      inverted ? 'text-gold/80' : 'text-brown',
                     )}>
                       {m.label}
                     </span>

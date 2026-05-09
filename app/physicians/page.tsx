@@ -1,8 +1,9 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import type { Metadata } from 'next'
 import { ArrowUpRight, GraduationCap, Stethoscope, ShieldCheck } from 'lucide-react'
 import { PageHero } from '@/components/site/page-hero'
-import { Section, SectionHeading } from '@/components/site/section'
+import { Section } from '@/components/site/section'
 
 export const metadata: Metadata = {
   title: 'Our Physicians',
@@ -15,7 +16,7 @@ export default function PhysiciansPage() {
     <>
       <PageHero
         eyebrow="Meet Our Physicians"
-        title={<>Care directed by <em className="not-italic text-sage">double board-certified</em> physicians.</>}
+        title={<>Care directed by <em className="not-italic text-brown">double board-certified</em> physicians.</>}
         subtitle="Internal Medicine and Obesity Medicine — focused on metabolic health, weight management, and hormone therapy. Each treatment plan is grounded in clinical assessment, evidence-based therapy, and continuous monitoring."
         primary={{ href: '/book', label: 'Book Initial Consultation' }}
       />
@@ -24,7 +25,7 @@ export default function PhysiciansPage() {
         <div className="space-y-16">
           <PhysicianProfile
             name="Afshin Amini, MD"
-            initials="AA"
+            photo="/dr-amini.png"
             credentials="Internal Medicine · Obesity Medicine"
             paragraphs={[
               'Dr. Amini focuses on metabolic health, weight management, and hormone therapy, providing individualized, physician-directed care.',
@@ -43,7 +44,7 @@ export default function PhysiciansPage() {
 
           <PhysicianProfile
             name="Amirseena Tolebeyan, MD"
-            initials="AT"
+            photo="/dr-tolebeyan.jpeg"
             credentials="Internal Medicine · Obesity Medicine"
             reverse
             paragraphs={[
@@ -66,11 +67,11 @@ export default function PhysiciansPage() {
         <div className="max-w-3xl mx-auto text-center">
           <span className="eyebrow">Shared Clinical Philosophy</span>
           <p className="mt-7 font-display text-[28px] md:text-[36px] leading-[1.25] tracking-[-0.012em] text-ink">
-            “The goal is not <em className="text-sage">short-term</em> change, but
-            <em className="text-sage"> sustained improvement</em> in overall health — measured one patient,
+            “The goal is not <em className="text-brown">short-term</em> change, but
+            <em className="text-brown"> sustained improvement</em> in overall health — measured one patient,
             one visit, one adjustment at a time.”
           </p>
-          <p className="mt-7 text-[12.5px] tracking-[0.2em] uppercase text-sage">— The Physicians of Velora</p>
+          <p className="mt-7 text-[12.5px] tracking-[0.2em] uppercase text-brown">— The Physicians of Velora</p>
         </div>
       </Section>
 
@@ -85,11 +86,11 @@ export default function PhysiciansPage() {
             Schedule your <em className="not-italic text-gold">initial consultation</em>.
           </h2>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
-            <Link href="/book" className="btn bg-cream text-ink hover:bg-gold px-7 py-4">
+            <Link href="/book" className="inline-flex items-center justify-center gap-2 bg-cream text-brown hover:bg-paper px-6 py-3.5 rounded-md text-[11px] tracking-[0.24em] uppercase font-semibold transition-colors">
               Book Consultation
               <ArrowUpRight className="size-3.5" />
             </Link>
-            <Link href="/about" className="btn bg-transparent border border-cream/30 text-cream hover:bg-cream hover:text-ink px-7 py-4">
+            <Link href="/about" className="inline-flex items-center justify-center gap-2 border border-cream/40 text-cream hover:bg-cream/10 px-6 py-3.5 rounded-md text-[11px] tracking-[0.24em] uppercase font-semibold transition-colors">
               About the Practice
             </Link>
           </div>
@@ -100,10 +101,10 @@ export default function PhysiciansPage() {
 }
 
 function PhysicianProfile({
-  name, initials, credentials, paragraphs, credentialItems, focus, reverse,
+  name, photo, credentials, paragraphs, credentialItems, focus, reverse,
 }: {
   name: string
-  initials: string
+  photo: string
   credentials: string
   paragraphs: string[]
   credentialItems: { icon: React.ReactNode; label: string }[]
@@ -114,9 +115,15 @@ function PhysicianProfile({
     <article className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
       {/* Portrait */}
       <div className={`lg:col-span-5 ${reverse ? 'lg:order-2' : ''}`}>
-        <div className="aspect-[4/5] bg-paper border border-line relative overflow-hidden flex items-center justify-center">
-          <span className="font-display text-[120px] sm:text-[160px] lg:text-[180px] text-sage/20 leading-none select-none">{initials}</span>
-          <div className="absolute inset-0 bg-gradient-to-tr from-sage/5 via-transparent to-gold/10" />
+        <div className="aspect-[4/5] bg-paper border border-line relative overflow-hidden rounded-md">
+          <Image
+            src={photo}
+            alt={name}
+            fill
+            sizes="(min-width: 1024px) 40vw, 100vw"
+            className="object-cover"
+            style={{ objectPosition: 'center 18%' }}
+          />
           <div className="absolute bottom-0 left-0 right-0 px-6 py-5 bg-gradient-to-t from-ink/80 to-transparent">
             <p className="text-[10.5px] tracking-[0.22em] uppercase text-cream/80">Velora Medical Institute</p>
             <p className="font-display text-[22px] text-cream mt-1">{name}</p>
@@ -124,8 +131,8 @@ function PhysicianProfile({
         </div>
         <div className="mt-6 grid grid-cols-1 gap-3">
           {credentialItems.map((c) => (
-            <div key={c.label} className="flex items-center gap-3 px-4 py-3 border border-line bg-paper">
-              <span className="size-7 rounded-full bg-sage-soft text-sage flex items-center justify-center">
+            <div key={c.label} className="flex items-center gap-3 px-4 py-3 border border-line bg-paper rounded-md">
+              <span className="size-7 rounded-full bg-brown-soft text-brown flex items-center justify-center">
                 {c.icon}
               </span>
               <span className="text-[13px] text-ink">{c.label}</span>
@@ -162,8 +169,11 @@ function PhysicianProfile({
         </div>
 
         <div className="mt-9">
-          <Link href="/book" className="btn-link">
-            Book a consultation with our physicians
+          <Link
+            href="/book"
+            className="inline-flex items-center gap-2 bg-brown text-cream hover:bg-brown-deep px-6 py-3.5 rounded-md text-[11px] tracking-[0.24em] uppercase font-semibold transition-colors"
+          >
+            Book a consultation
             <ArrowUpRight className="size-3.5" />
           </Link>
         </div>

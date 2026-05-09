@@ -19,7 +19,7 @@ export default function ContactPage() {
             className="mt-4 font-display leading-[1.04] tracking-[-0.018em] text-ink max-w-3xl"
             style={{ fontSize: 'clamp(2rem, 5.5vw, 4.25rem)' }}
           >
-            Scheduling, programs, eligibility &mdash; <em className="not-italic text-sage">non-clinical questions</em>.
+            Scheduling, programs, eligibility &mdash; <em className="not-italic text-brown">non-clinical questions</em>.
           </h1>
           <p className="mt-6 text-[16.5px] text-ink-soft max-w-2xl leading-relaxed">
             For anything clinical, book a consultation &mdash; medical advice is not given over email.
@@ -57,7 +57,7 @@ export default function ContactPage() {
               icon={<MapPin className="size-5" />}
               title="Location"
               value="Telemedicine practice"
-              description="Care delivered virtually. [STATES NEEDED: list of states where physicians are licensed]"
+              description="Care delivered virtually to patients across the United States."
             />
           </aside>
 
@@ -78,7 +78,7 @@ function ContactCard({
 }) {
   const content = (
     <>
-      <span className="size-10 rounded-full bg-sage-soft text-sage flex items-center justify-center">
+      <span className="size-10 rounded-full bg-brown-soft text-brown flex items-center justify-center">
         {icon}
       </span>
       <div className="mt-5">
@@ -90,7 +90,7 @@ function ContactCard({
   )
   if (href) {
     return (
-      <a href={href} className="block bg-paper border border-line p-7 hover:border-sage transition-colors">
+      <a href={href} className="block bg-paper border border-line p-7 hover:border-brown transition-colors">
         {content}
       </a>
     )

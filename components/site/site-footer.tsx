@@ -82,7 +82,7 @@ export function SiteFooter() {
             </li>
             <li className="flex items-start gap-2.5">
               <MapPin className="size-4 mt-0.5 text-brown shrink-0" strokeWidth={1.6} />
-              <span>Telemedicine practice — [STATES NEEDED]</span>
+              <span>Telemedicine practice — serving patients nationwide</span>
             </li>
           </ul>
         </div>

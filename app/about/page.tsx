@@ -15,7 +15,7 @@ export default function AboutPage() {
     <>
       <PageHero
         eyebrow="About Velora"
-        title={<>Sustained improvement, <em className="not-italic text-sage">measured one</em> visit at a time.</>}
+        title={<>Sustained improvement, <em className="not-italic text-brown">measured one</em> visit at a time.</>}
         subtitle="Velora Medical Institute is a physician-directed, direct-pay telemedicine practice focused on metabolic health, weight management, and hormone optimization. Two double board-certified physicians; no insurance, no fixed protocols, no rotating provider on every visit."
         primary={{ href: '/book', label: 'Book Initial Consultation' }}
         secondary={{ href: '/physicians', label: 'Meet Our Physicians' }}
@@ -27,7 +27,7 @@ export default function AboutPage() {
           <div className="lg:col-span-5">
             <SectionHeading
               eyebrow="Our Standard"
-              title={<>Care directed by <em className="not-italic text-sage">physicians</em> — not protocols.</>}
+              title={<>Care directed by <em className="not-italic text-brown">physicians</em> — not protocols.</>}
             />
           </div>
           <div className="lg:col-span-7 space-y-7 text-[16.5px] leading-relaxed text-ink-soft">
@@ -55,7 +55,7 @@ export default function AboutPage() {
       <Section bg="cream">
         <SectionHeading
           eyebrow="What We Do"
-          title={<>Two clinical specialties, <em className="not-italic text-sage">one standard</em>.</>}
+          title={<>Two clinical specialties, <em className="not-italic text-brown">one standard</em>.</>}
         />
         <div className="mt-14 grid md:grid-cols-2 gap-6">
           <Pillar
@@ -81,7 +81,7 @@ export default function AboutPage() {
           <div className="lg:col-span-5">
             <SectionHeading
               eyebrow="Operating Principles"
-              title={<>How we <em className="not-italic text-sage">practice</em>.</>}
+              title={<>How we <em className="not-italic text-brown">practice</em>.</>}
             />
           </div>
           <div className="lg:col-span-7">
@@ -139,7 +139,7 @@ export default function AboutPage() {
             className="mt-6 font-display leading-[1.04] tracking-[-0.02em] text-ink max-w-3xl mx-auto"
             style={{ fontSize: 'clamp(2rem, 5.5vw, 3.625rem)' }}
           >
-            Ready to begin <em className="not-italic text-sage">physician-guided</em> care?
+            Ready to begin <em className="not-italic text-brown">physician-guided</em> care?
           </h2>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
             <Link href="/book" className="btn-primary px-7 py-4">
@@ -159,12 +159,12 @@ function Pillar({
   icon: React.ReactNode; tagline: string; title: string; body: string; href: string
 }) {
   return (
-    <Link href={href} className="group bg-paper border border-line p-8 lg:p-10 hover:border-sage transition-all">
-      <span className="size-12 rounded-full bg-sage-soft text-sage flex items-center justify-center">{icon}</span>
+    <Link href={href} className="group bg-paper border border-line p-8 lg:p-10 hover:border-brown transition-all">
+      <span className="size-12 rounded-full bg-brown-soft text-brown flex items-center justify-center">{icon}</span>
       <p className="mt-7 eyebrow">{tagline}</p>
       <h3 className="mt-3 font-display text-[26px] leading-tight">{title}</h3>
       <p className="mt-4 text-[15px] text-ink-soft leading-relaxed">{body}</p>
-      <span className="mt-7 inline-flex items-center gap-1.5 text-ink group-hover:text-sage transition-colors text-[14px] font-medium">
+      <span className="mt-7 inline-flex items-center gap-1.5 text-ink group-hover:text-brown transition-colors text-[14px] font-medium">
         Learn more <ArrowUpRight className="size-3.5" />
       </span>
     </Link>

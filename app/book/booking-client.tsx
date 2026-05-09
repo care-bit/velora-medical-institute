@@ -143,7 +143,7 @@ export function BookingClient() {
             className="mt-4 font-display leading-[1.04] tracking-[-0.018em] text-ink max-w-3xl"
             style={{ fontSize: 'clamp(2rem, 5.5vw, 4.25rem)' }}
           >
-            Begin physician-guided care in <em className="not-italic text-sage">three steps</em>.
+            Begin physician-guided care in <em className="not-italic text-brown">three steps</em>.
           </h1>
           <p className="mt-6 text-[16.5px] text-ink-soft max-w-2xl leading-relaxed">
             All visits are conducted via secure telemedicine. Your appointment is confirmed once
@@ -543,7 +543,7 @@ function ConfirmationView({
           {[
             { n: '01', t: 'Confirmation Email', b: 'Look out for an email with payment + scheduling details.' },
             { n: '02', t: 'Complete Intake', b: 'Provide your medical history and goals before your visit.' },
-            { n: '03', t: 'Telemedicine Visit', b: 'Secure video link arrives by email before your appointment. [STAT NEEDED: confirm exact lead time — 24h is a placeholder]' },
+            { n: '03', t: 'Telemedicine Visit', b: 'A secure video link is emailed to you ahead of your scheduled appointment.' },
           ].map((s) => (
             <div key={s.n} className="bg-paper border border-line p-6">
               <span className="font-display italic text-gold text-[18px]">{s.n}</span>
