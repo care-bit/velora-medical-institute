@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Fraunces, Inter } from 'next/font/google'
 import { Toaster } from '@/components/ui/sonner'
 import { SiteHeader } from '@/components/site/site-header'
@@ -50,6 +50,13 @@ export const metadata: Metadata = {
     apple: '/apple-icon.png',
   },
   robots: { index: true, follow: true },
+}
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: '#F4EBD3',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
