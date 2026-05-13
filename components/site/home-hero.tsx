@@ -58,7 +58,25 @@ export function HomeHero() {
         aria-hidden
       />
 
-      <div className="relative container-velora pt-12 sm:pt-16 lg:pt-24 pb-10 sm:pb-14 lg:pb-14 lg:min-h-[calc(100vh-78px)] lg:flex lg:flex-col lg:justify-between">
+      <div className="relative container-velora pt-6 sm:pt-10 lg:pt-24 pb-10 sm:pb-14 lg:pb-14 lg:min-h-[calc(100vh-78px)] lg:flex lg:flex-col lg:justify-between">
+        {/* Mobile/tablet hero photo — leads visually at top */}
+        <div className="lg:hidden mb-10 sm:mb-12 relative aspect-[5/4] sm:aspect-[16/10] rounded-xl overflow-hidden ring-1 ring-gold/15 shadow-[0_30px_60px_-26px_rgba(0,0,0,0.8)]">
+          <Image
+            src="/photos/hero-telehealth.png"
+            alt="A Velora patient meeting with a physician by telemedicine"
+            fill
+            sizes="100vw"
+            className="object-cover"
+            priority
+          />
+          {/* Subtle bottom fade so it feels integrated with dark hero */}
+          <div
+            className="absolute inset-x-0 bottom-0 h-1/4 pointer-events-none"
+            style={{ background: 'linear-gradient(to bottom, rgba(11,9,7,0) 0%, rgba(11,9,7,0.7) 100%)' }}
+            aria-hidden
+          />
+        </div>
+
         {/* Main editorial column */}
         <div className="max-w-[560px]">
 
@@ -124,18 +142,6 @@ export function HomeHero() {
               Start Hormone Therapy
               <ArrowRight className="size-4" strokeWidth={2} />
             </Link>
-          </div>
-
-          {/* Mobile photo */}
-          <div className="lg:hidden mt-10 relative aspect-[4/3] sm:aspect-[16/10] rounded-xl overflow-hidden ring-1 ring-gold/15">
-            <Image
-              src="/photos/hero-telehealth.png"
-              alt="A Velora patient meeting with a physician by telemedicine"
-              fill
-              sizes="100vw"
-              className="object-cover"
-              priority
-            />
           </div>
 
           {/* Trust row */}
