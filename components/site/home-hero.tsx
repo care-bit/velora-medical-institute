@@ -58,7 +58,7 @@ export function HomeHero() {
         aria-hidden
       />
 
-      <div className="relative container-velora pt-12 sm:pt-16 lg:pt-24 pb-10 sm:pb-14 lg:pb-14 lg:min-h-[calc(100vh-110px)] lg:flex lg:flex-col lg:justify-between">
+      <div className="relative container-velora pt-12 sm:pt-16 lg:pt-24 pb-10 sm:pb-14 lg:pb-14 lg:min-h-[calc(100vh-78px)] lg:flex lg:flex-col lg:justify-between">
         {/* Main editorial column */}
         <div className="max-w-[560px]">
 

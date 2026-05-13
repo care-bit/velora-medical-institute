@@ -23,7 +23,7 @@ export default function HomePage() {
         <div className="container-velora pt-10 lg:pt-14 pb-2 text-center">
           <ChapterEyebrow number="01" label="Our Approach" />
         </div>
-        <div className="relative w-full aspect-[16/9] lg:max-h-[calc(100vh-110px)] overflow-hidden">
+        <div className="relative w-full aspect-[16/9] lg:max-h-[calc(100vh-78px)] overflow-hidden">
           <Image
             src="/physician-led-care.png"
             alt="Drs. Tolebeyan and Amini — double board-certified in Internal Medicine and Obesity Medicine — flanking the Velora care framework: Physician-Led Individualized Care; Physician-Directed Care; Personalized Treatment Plans; Telemedicine Visits; Direct-Pay Practice"

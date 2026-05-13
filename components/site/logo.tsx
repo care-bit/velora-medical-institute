@@ -19,10 +19,10 @@ export function Logo({
 }: LogoProps) {
   const dims =
     size === 'sm'
-      ? { h: 92, w: 138 }
+      ? { h: 76, w: 114 }
       : size === 'lg'
         ? { h: 160, w: 240 }
-        : { h: 116, w: 174 }
+        : { h: 100, w: 150 }
 
   return (
     <Link
