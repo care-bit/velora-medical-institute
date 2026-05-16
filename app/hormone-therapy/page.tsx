@@ -622,9 +622,9 @@ function MiniPillar({ label }: { label: string }) {
 
 function ChapterEyebrow({ number, label }: { number: string; label: string }) {
   return (
-    <div className="inline-flex items-center gap-3">
+    <div className="inline-flex flex-wrap items-center justify-center gap-x-3 gap-y-1 max-w-full">
       <span className="w-6 h-px bg-gold/70" />
-      <p className="text-[10px] tracking-[0.42em] uppercase text-brown font-semibold">
+      <p className="text-[10px] tracking-[0.24em] sm:tracking-[0.42em] uppercase text-brown font-semibold">
         {number} &middot; {label}
       </p>
       <span className="w-6 h-px bg-gold/70" />

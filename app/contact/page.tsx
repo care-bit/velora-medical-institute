@@ -69,7 +69,7 @@ export default function ContactPage() {
 
           {/* Header */}
           <div className="max-w-3xl">
-            <p className="text-[10.5px] tracking-[0.42em] uppercase text-brown font-semibold">
+            <p className="text-[10px] sm:text-[10.5px] tracking-[0.26em] sm:tracking-[0.42em] uppercase text-brown font-semibold">
               Contact
             </p>
             <h1

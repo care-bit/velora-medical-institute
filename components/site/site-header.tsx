@@ -73,13 +73,22 @@ export function SiteHeader() {
     closeTimer.current = setTimeout(() => setServicesOpen(false), 150)
   }
 
+  // Homepage hero is dark — float a transparent header over it until scroll.
+  const isHome = pathname === '/'
+  const overHero = isHome && !scrolled
+  const navIdle = overHero ? 'text-cream/85 hover:text-gold' : 'text-ink hover:text-brown'
+  const navActive = overHero ? 'text-gold' : 'text-brown'
+  const accentBar = overHero ? 'bg-gold' : 'bg-brown'
+
   return (
     <header
       className={cn(
         'sticky top-0 z-50 transition-[background,backdrop-filter,box-shadow] duration-200',
-        scrolled
-          ? 'bg-bone/65 backdrop-blur-xl shadow-[0_4px_20px_-12px_rgba(74,52,28,0.18)]'
-          : 'bg-bone',
+        overHero
+          ? 'bg-transparent'
+          : scrolled
+            ? 'bg-bone/65 backdrop-blur-xl shadow-[0_4px_20px_-12px_rgba(74,52,28,0.18)]'
+            : 'bg-bone',
       )}
     >
       <div className="container-velora flex items-center justify-between h-[78px] gap-6">
@@ -103,7 +112,7 @@ export function SiteHeader() {
                     href={item.href}
                     className={cn(
                       'inline-flex items-center gap-1 text-[11px] tracking-[0.22em] uppercase font-medium py-2 transition-colors',
-                      servicesOpen || dropdownActive ? 'text-brown' : 'text-ink hover:text-brown',
+                      servicesOpen || dropdownActive ? navActive : navIdle,
                     )}
                     aria-haspopup="menu"
                     aria-expanded={servicesOpen}
@@ -111,7 +120,8 @@ export function SiteHeader() {
                     {item.label}
                     <ChevronDown className={cn('size-3 transition-transform', servicesOpen && 'rotate-180')} />
                     <span className={cn(
-                      'absolute left-0 right-0 -bottom-0.5 h-px bg-brown origin-center transition-transform',
+                      'absolute left-0 right-0 -bottom-0.5 h-px origin-center transition-transform',
+                      accentBar,
                       servicesOpen || dropdownActive ? 'scale-x-100' : 'scale-x-0',
                     )} />
                   </Link>
@@ -179,12 +189,12 @@ export function SiteHeader() {
                 href={item.href}
                 className={cn(
                   'relative text-[11px] tracking-[0.22em] uppercase font-medium py-2 transition-colors',
-                  active ? 'text-brown' : 'text-ink hover:text-brown',
+                  active ? navActive : navIdle,
                 )}
               >
                 {item.label}
                 {active && (
-                  <span className="absolute left-0 right-0 -bottom-0.5 h-px bg-brown" />
+                  <span className={cn('absolute left-0 right-0 -bottom-0.5 h-px', accentBar)} />
                 )}
               </Link>
             )
@@ -194,14 +204,22 @@ export function SiteHeader() {
         <div className="flex items-center gap-3 shrink-0">
           <Link
             href="/book"
-            className="hidden md:inline-flex items-center gap-2 bg-brown text-cream hover:bg-brown-deep px-5 py-2.5 rounded-md text-[10.5px] tracking-[0.22em] uppercase font-semibold transition-colors"
+            className={cn(
+              'hidden md:inline-flex items-center gap-2 px-5 py-2.5 rounded-md text-[10.5px] tracking-[0.22em] uppercase font-semibold transition-colors',
+              overHero
+                ? 'bg-gold text-ink hover:bg-gold/90'
+                : 'bg-brown text-cream hover:bg-brown-deep',
+            )}
           >
             <Calendar className="size-3.5" strokeWidth={2} />
             Schedule Consultation
           </Link>
           <button
             type="button"
-            className="lg:hidden inline-flex items-center justify-center w-10 h-10 -mr-2 text-ink"
+            className={cn(
+              'lg:hidden inline-flex items-center justify-center w-10 h-10 -mr-2 transition-colors',
+              overHero ? 'text-cream' : 'text-ink',
+            )}
             onClick={() => setOpen(true)}
             aria-label="Open menu"
           >

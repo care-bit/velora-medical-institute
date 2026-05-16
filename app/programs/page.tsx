@@ -108,7 +108,7 @@ export default function ProgramsPage() {
       <section id="pricing" className="bg-bone border-t border-line/40">
         <div className="container-velora py-20 lg:py-24">
           <div className="text-center max-w-2xl mx-auto">
-            <ChapterEyebrow number="01" label="Step Two · Choose Your Program" />
+            <ChapterEyebrow number="01" label="Choose Your Program" />
             <h2
               className="mt-7 font-display text-ink leading-[1.04] tracking-[-0.018em]"
               style={{ fontSize: 'clamp(1.75rem, 3.6vw, 2.5rem)' }}
@@ -298,9 +298,9 @@ export default function ProgramsPage() {
 
 function ChapterEyebrow({ number, label }: { number: string; label: string }) {
   return (
-    <div className="inline-flex items-center gap-3">
+    <div className="inline-flex flex-wrap items-center justify-center gap-x-3 gap-y-1 max-w-full">
       <span className="w-6 h-px bg-gold/70" />
-      <p className="text-[10px] tracking-[0.42em] uppercase text-brown font-semibold">
+      <p className="text-[10px] tracking-[0.24em] sm:tracking-[0.42em] uppercase text-brown font-semibold">
         {number} &middot; {label}
       </p>
       <span className="w-6 h-px bg-gold/70" />

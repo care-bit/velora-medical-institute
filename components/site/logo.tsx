@@ -17,12 +17,13 @@ export function Logo({
   className,
   size = 'md',
 }: LogoProps) {
+  // Logo art is ~2:1 (wordmark + leaf mark). Keep width = 2 × height.
   const dims =
     size === 'sm'
-      ? { h: 76, w: 114 }
+      ? { h: 56, w: 112 }
       : size === 'lg'
-        ? { h: 160, w: 240 }
-        : { h: 100, w: 150 }
+        ? { h: 132, w: 264 }
+        : { h: 72, w: 144 }
 
   return (
     <Link
