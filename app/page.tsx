@@ -35,35 +35,39 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ===== 02 · PERSONALIZED FOR EVERY STAGE — Service areas ===== */}
+      {/* ===== 02 · OUR SERVICE AREAS — 3 photo-forward cards ===== */}
       <section className="bg-paper">
-        <div className="container-velora py-16 lg:py-20">
+        <div className="container-velora py-16 lg:py-24">
           <div className="text-center max-w-3xl mx-auto">
-            <ChapterEyebrow number="02" label="Our Services" />
+            <p className="text-[10px] sm:text-[11px] tracking-[0.34em] uppercase text-brown font-semibold">
+              Our Service Areas
+            </p>
             <h2
-              className="mt-6 font-display leading-[1.04] tracking-[-0.018em] text-ink"
-              style={{ fontSize: 'clamp(1.625rem, 3.4vw, 2.375rem)' }}
+              className="mt-5 font-display leading-[1.1] tracking-[-0.018em] text-ink"
+              style={{ fontSize: 'clamp(1.75rem, 3.6vw, 2.625rem)' }}
             >
-              A physician-guided approach to
-              <br />
-              <em className="italic font-display text-brown">metabolic &amp; hormonal health.</em>
+              Personalized Medicine for Every Stage of Life
             </h2>
           </div>
 
-          <div className="mt-14 grid md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto">
+          <div className="mt-14 lg:mt-16 grid md:grid-cols-3 gap-7 lg:gap-9 max-w-6xl mx-auto">
             <ServiceCard
               href="/weight-management"
               image="/photos/card-weight.png"
-              numeral="01"
-              title="Medical Weight Management"
-              body="Comprehensive, physician-guided care focused on safe, effective, and sustainable weight management — including detailed medical evaluation, evidence-based medication options when appropriate, and ongoing monitoring."
+              title="Weight Management"
+              body="Physician-guided GLP-1 therapy and medical weight management programs to help you lose weight, improve metabolism, and sustain long-term results."
             />
             <ServiceCard
               href="/hormone-therapy"
               image="/photos/card-hormone.png"
-              numeral="02"
-              title="Hormone Therapy (BHRT)"
-              body="Physician-directed evaluation and management of hormone-related conditions impacting energy, metabolic function, hormonal balance, and well-being — grounded in clinical assessment and laboratory data."
+              title="Hormone Optimization"
+              body="Restore balance, improve energy, enhance mood, and support overall hormonal health through personalized hormone therapy."
+            />
+            <ServiceCard
+              href="/longevity"
+              image="/photos/card-longevity.png"
+              title="Longevity & Preventive Medicine"
+              body="Proactive, personalized strategies to optimize health, prevent disease, and support long-term vitality."
             />
           </div>
         </div>
@@ -384,44 +388,35 @@ function ChapterEyebrow({ number, label }: { number: string; label: string }) {
 }
 
 function ServiceCard({
-  href, image, numeral, title, body,
-}: { href: string; image: string; numeral: string; title: string; body: string }) {
+  href, image, title, body,
+}: { href: string; image: string; title: string; body: string }) {
   return (
-    <Link
-      href={href}
-      className="group flex flex-col bg-paper rounded-2xl overflow-hidden border border-line/60 shadow-[0_24px_50px_-30px_rgba(74,52,28,0.35)] hover:shadow-[0_36px_70px_-30px_rgba(74,52,28,0.5)] transition-shadow"
-    >
-      {/* Photo top — fixed aspect for consistency */}
-      <div className="relative aspect-[4/3] overflow-hidden">
+    <Link href={href} className="group flex flex-col text-center">
+      {/* Photo — photo-forward, gently rounded */}
+      <div className="relative aspect-[4/3] overflow-hidden rounded-lg ring-1 ring-line/50 shadow-[0_22px_45px_-30px_rgba(74,52,28,0.4)]">
         <Image
           src={image}
           alt={title}
           fill
           sizes="(min-width: 768px) 33vw, 100vw"
-          className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+          className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"
         />
-        <span className="absolute top-4 left-4 inline-flex items-center justify-center w-10 h-10 rounded-full bg-cream/95 backdrop-blur-sm font-display italic text-brown text-[16px] tracking-[-0.02em] shadow-[0_8px_20px_-8px_rgba(74,52,28,0.4)]">
-          {numeral}
-        </span>
       </div>
 
-      {/* Copy */}
-      <div className="flex flex-col flex-1 px-6 py-7 lg:px-7 lg:py-8">
-        <h3
-          className="font-display text-ink leading-[1.15] tracking-[-0.012em]"
-          style={{ fontSize: 'clamp(1.375rem, 2vw, 1.625rem)' }}
-        >
-          {title}
-        </h3>
-        <div className="mt-4 w-8 h-px bg-gold/70" />
-        <p className="mt-4 text-[14px] text-ink-soft leading-[1.7] flex-1">
-          {body}
-        </p>
-        <span className="mt-7 inline-flex items-center gap-2 text-brown group-hover:text-brown-deep text-[12px] sm:text-[10.5px] tracking-[0.24em] sm:tracking-[0.28em] uppercase font-semibold transition-colors">
-          Learn more
-          <ArrowRight className="size-3.5 transition-transform group-hover:translate-x-0.5" />
-        </span>
-      </div>
+      {/* Copy — centered under photo */}
+      <h3
+        className="mt-7 font-display text-ink leading-[1.15] tracking-[-0.012em]"
+        style={{ fontSize: 'clamp(1.375rem, 2vw, 1.625rem)' }}
+      >
+        {title}
+      </h3>
+      <p className="mt-4 mx-auto max-w-[320px] text-[13.5px] text-ink-soft leading-[1.7]">
+        {body}
+      </p>
+      <span className="mt-6 inline-flex items-center justify-center gap-2 text-brown group-hover:text-brown-deep text-[11px] sm:text-[10.5px] tracking-[0.26em] sm:tracking-[0.28em] uppercase font-semibold transition-colors">
+        Learn More
+        <ArrowRight className="size-3.5 transition-transform group-hover:translate-x-0.5" />
+      </span>
     </Link>
   )
 }

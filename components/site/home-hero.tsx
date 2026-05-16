@@ -21,10 +21,10 @@ export function HomeHero() {
 
   return (
     <section className="relative bg-[#0B0907] text-cream -mt-[78px]">
-      <div className="lg:grid lg:grid-cols-[minmax(0,47fr)_minmax(0,53fr)] lg:items-stretch">
+      <div className="lg:grid lg:grid-cols-[minmax(0,47fr)_minmax(0,53fr)] lg:items-stretch lg:min-h-[calc(100svh-58px)]">
 
         {/* ===== LEFT — text panel ===== */}
-        <div className="relative z-10 flex flex-col justify-center px-6 sm:px-10 lg:pl-[max(3rem,calc((100vw-115rem)/2+4rem))] lg:pr-14 xl:pr-20 pt-[112px] sm:pt-[124px] lg:pt-[140px] pb-12 lg:pb-20">
+        <div className="relative z-10 flex flex-col lg:justify-center px-6 sm:px-10 lg:pl-[max(3rem,calc((100vw-115rem)/2+4rem))] lg:pr-14 xl:pr-20 pt-[100px] sm:pt-[108px] lg:pt-[88px] pb-10 lg:pb-10">
 
           {/* Mobile photo — leads at top */}
           <div className="lg:hidden -mx-6 sm:-mx-10 mb-10 relative aspect-[5/4] sm:aspect-[16/10]">
@@ -48,18 +48,18 @@ export function HomeHero() {
             <div className="flex flex-col items-start">
               <VMonogram className="text-gold" />
               <p
-                className="mt-3 font-display text-cream leading-none"
-                style={{ fontSize: 'clamp(2.25rem, 4.6vw, 3.5rem)', letterSpacing: '0.12em', fontWeight: 400 }}
+                className="mt-2 font-display text-cream leading-none"
+                style={{ fontSize: 'clamp(1.875rem, 3.6vw, 2.75rem)', letterSpacing: '0.12em', fontWeight: 400 }}
               >
                 VELORA
               </p>
-              <p className="mt-2.5 text-[10px] sm:text-[11px] tracking-[0.46em] uppercase text-gold font-semibold">
+              <p className="mt-2 text-[9.5px] sm:text-[10.5px] tracking-[0.44em] uppercase text-gold font-semibold">
                 Medical Institute
               </p>
             </div>
 
             {/* Eyebrow */}
-            <div className="mt-9 sm:mt-11 flex flex-wrap items-center gap-x-3 gap-y-2 text-[10px] sm:text-[11px] tracking-[0.28em] uppercase text-cream/90 font-semibold">
+            <div className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-2 text-[10px] sm:text-[11px] tracking-[0.26em] uppercase text-cream/90 font-semibold">
               <span>Telemedicine Care</span>
               <span className="size-[3px] rounded-full bg-gold" aria-hidden />
               <span>Obesity Medicine</span>
@@ -69,8 +69,8 @@ export function HomeHero() {
 
             {/* Headline */}
             <h1
-              className="mt-5 font-display leading-[1.05] tracking-[-0.02em]"
-              style={{ fontSize: 'clamp(1.875rem, 3.6vw, 3.75rem)' }}
+              className="mt-4 font-display leading-[1.04] tracking-[-0.02em]"
+              style={{ fontSize: 'clamp(1.75rem, 2.8vw, 2.625rem)' }}
             >
               <span className="text-cream">Physician-Guided</span>
               <br />
@@ -79,17 +79,17 @@ export function HomeHero() {
               <span className="text-cream">Hormone Optimization</span>
             </h1>
 
-            <div className="mt-7 w-16 h-px bg-gold" />
+            <div className="mt-5 w-16 h-px bg-gold" />
 
             {/* Body */}
-            <p className="mt-6 max-w-[420px] text-[14px] sm:text-[15px] leading-[1.7] text-cream/70">
+            <p className="mt-5 max-w-[440px] text-[13.5px] sm:text-[14.5px] leading-[1.65] text-cream/70">
               Personalized telemedicine care for metabolic health, weight management,
               and hormone balance &mdash; guided by physicians and refined over time
               to support lasting results.
             </p>
 
             {/* CTAs */}
-            <div className="mt-8 sm:mt-9 flex flex-col sm:flex-row gap-3 sm:gap-4">
+            <div className="mt-7 flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Link
                 href="/book"
                 className="inline-flex items-center justify-center gap-2.5 bg-gold text-ink hover:bg-gold/90 px-7 py-4 rounded-md text-[11.5px] tracking-[0.2em] uppercase font-semibold transition-colors"
@@ -107,7 +107,7 @@ export function HomeHero() {
             </div>
 
             {/* Trust row */}
-            <div className="mt-12 sm:mt-14 grid grid-cols-1 sm:grid-cols-3">
+            <div className="mt-8 grid grid-cols-1 sm:grid-cols-3">
               <TrustItem
                 icon={<Monitor className="size-5" strokeWidth={1.4} />}
                 title="Telemedicine Visits"
@@ -184,8 +184,8 @@ export function HomeHero() {
 function VMonogram({ className }: { className?: string }) {
   return (
     <svg
-      width="78"
-      height="88"
+      width="58"
+      height="66"
       viewBox="0 0 78 88"
       fill="none"
       className={className}
