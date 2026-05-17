@@ -29,7 +29,7 @@ export function HomeHero() {
           {/* Mobile photo — leads at top */}
           <div className="lg:hidden -mx-6 sm:-mx-10 mb-10 relative aspect-[5/4] sm:aspect-[16/10]">
             <Image
-              src="/photos/hero-dark.png"
+              src="/photos/hero-telehealth-main.png"
               alt="A patient on a Velora telemedicine visit with a physician"
               fill
               sizes="100vw"
@@ -120,7 +120,7 @@ export function HomeHero() {
         {/* ===== RIGHT — photo (desktop) ===== */}
         <div className="relative hidden lg:block">
           <Image
-            src="/photos/hero-dark.png"
+            src="/photos/hero-telehealth-main.png"
             alt="A patient on a Velora telemedicine visit with a physician"
             fill
             sizes="55vw"
