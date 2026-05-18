@@ -11,6 +11,24 @@
   }
 }
 
+/* Testimonial marquee — seamless infinite horizontal auto-scroll.
+   Track holds the list twice; translating -50% loops perfectly. */
+@keyframes velora-marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: velora-marquee 38s linear infinite;
+}
+.marquee-mask:hover .marquee-track {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none; }
+}
+
 @layer base {
   :root {
     /* Velora palette — luxury champagne + dark luxe */

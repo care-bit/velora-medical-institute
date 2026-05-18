@@ -202,6 +202,37 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ===== PATIENT VOICES — auto-scrolling testimonial marquee ===== */}
+      <section className="bg-paper border-t border-line/40 overflow-hidden">
+        <div className="container-velora pt-14 lg:pt-20 pb-2 text-center">
+          <p className="text-[10px] sm:text-[11px] tracking-[0.34em] uppercase text-brown font-semibold">
+            Patient Voices
+          </p>
+          <h2
+            className="mt-5 font-display text-ink leading-[1.1] tracking-[-0.018em]"
+            style={{ fontSize: 'clamp(1.5rem, 3vw, 2.125rem)' }}
+          >
+            What patients say
+          </h2>
+        </div>
+
+        <div
+          className="marquee-mask mt-10 lg:mt-12 pb-14 lg:pb-20"
+          style={{
+            WebkitMaskImage:
+              'linear-gradient(to right, transparent, #000 7%, #000 93%, transparent)',
+            maskImage:
+              'linear-gradient(to right, transparent, #000 7%, #000 93%, transparent)',
+          }}
+        >
+          <div className="marquee-track gap-5 lg:gap-7">
+            {[...TESTIMONIALS, ...TESTIMONIALS].map((t, i) => (
+              <Testimonial key={i} quote={t.quote} name={t.name} />
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ===== 06 · BEGIN YOUR CARE — tight brown band ===== */}
       <section className="bg-brown text-cream">
         <div className="container-velora py-5 sm:py-6">
@@ -236,6 +267,43 @@ export default function HomePage() {
 }
 
 /* Helpers */
+
+const TESTIMONIALS = [
+  {
+    quote:
+      'Velora made me feel heard from the very first visit. The care was thoughtful, personalized, and far more comprehensive than anything I had experienced before.',
+    name: 'Sarah M.',
+  },
+  {
+    quote:
+      'The structured program gave me accountability, consistency, and physician guidance that truly helped me make sustainable progress. I finally feel like I have a long-term plan that works.',
+    name: 'Michael R.',
+  },
+  {
+    quote:
+      'What stood out most was the level of physician involvement and attention to detail. Every recommendation felt individualized and evidence-based rather than rushed or generic.',
+    name: 'Jennifer L.',
+  },
+]
+
+function Testimonial({ quote, name }: { quote: string; name: string }) {
+  return (
+    <figure className="w-[300px] sm:w-[380px] lg:w-[440px] shrink-0 bg-cream rounded-2xl border border-line/60 shadow-[0_24px_50px_-32px_rgba(74,52,28,0.35)] px-7 py-8 lg:px-9 lg:py-10 flex flex-col">
+      <span className="font-display text-brown/30 leading-none text-[44px]" aria-hidden>
+        &ldquo;
+      </span>
+      <blockquote className="-mt-3 text-[14px] lg:text-[15px] text-ink-soft leading-[1.7] flex-1">
+        {quote}
+      </blockquote>
+      <figcaption className="mt-6 flex items-center gap-3">
+        <span className="w-7 h-px bg-gold/70" />
+        <span className="text-[11px] tracking-[0.22em] uppercase text-brown font-semibold">
+          {name}
+        </span>
+      </figcaption>
+    </figure>
+  )
+}
 
 function ChapterEyebrow({ number, label }: { number: string; label: string }) {
   return (
