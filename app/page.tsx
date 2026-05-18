@@ -233,8 +233,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ===== 06 · BEGIN YOUR CARE — tight brown band ===== */}
-      <section className="bg-brown text-cream">
+      {/* ===== 06 · BEGIN YOUR CARE — tight brown band (desktop only) ===== */}
+      <section className="hidden lg:block bg-brown text-cream">
         <div className="container-velora py-5 sm:py-6">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-8 text-center sm:text-left">
             <div className="flex flex-wrap items-baseline justify-center sm:justify-start gap-x-3 gap-y-1">

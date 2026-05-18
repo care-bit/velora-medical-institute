@@ -357,7 +357,7 @@ export default function LongevityPage() {
 
                 <Link
                   href="/book"
-                  className="mt-8 inline-flex w-full items-center justify-center gap-2.5 bg-cream text-ink hover:bg-paper px-6 py-3.5 rounded-md text-[11px] tracking-[0.28em] uppercase font-semibold transition-colors"
+                  className="mt-8 hidden lg:inline-flex w-full items-center justify-center gap-2.5 bg-cream text-ink hover:bg-paper px-6 py-3.5 rounded-md text-[11px] tracking-[0.28em] uppercase font-semibold transition-colors"
                 >
                   Start Optimization Program
                   <ArrowRight className="size-4" strokeWidth={2} />
@@ -368,8 +368,8 @@ export default function LongevityPage() {
         </div>
       </section>
 
-      {/* ===== 04 · YOUR OPTIMIZATION JOURNEY — 3 phases ===== */}
-      <section className="bg-bone border-t border-line/40">
+      {/* ===== 04 · YOUR OPTIMIZATION JOURNEY — 3 phases (desktop only) ===== */}
+      <section className="hidden lg:block bg-bone border-t border-line/40">
         <div className="container-velora py-12 sm:py-16 lg:py-28">
           <div className="text-center max-w-2xl mx-auto">
             <ChapterEyebrow number="04" label="Your Optimization Journey" />
@@ -415,8 +415,8 @@ export default function LongevityPage() {
         </div>
       </section>
 
-      {/* ===== 05 · WHY PHYSICIAN-GUIDED ===== */}
-      <section className="bg-paper border-t border-line/40">
+      {/* ===== 05 · WHY PHYSICIAN-GUIDED (desktop only) ===== */}
+      <section className="hidden lg:block bg-paper border-t border-line/40">
         <div className="container-velora py-12 sm:py-16 lg:py-24">
           <div className="grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] gap-12 lg:gap-20 items-start">
             <div>
@@ -482,8 +482,8 @@ export default function LongevityPage() {
         </div>
       </section>
 
-      {/* ===== 06 · START YOUR CARE — final CTA ===== */}
-      <section className="bg-bone border-t border-line/40">
+      {/* ===== 06 · START YOUR CARE — final CTA (desktop only) ===== */}
+      <section className="hidden lg:block bg-bone border-t border-line/40">
         <div className="container-velora py-10 sm:py-14 lg:py-20">
           <div className="max-w-[1120px] xl:max-w-[1280px] mx-auto">
             <div className="text-center">
@@ -586,7 +586,7 @@ export default function LongevityPage() {
                 <ArrowRight className="size-3.5" />
               </Link>
 
-              <div className="mt-9 relative aspect-[16/10] rounded-xl overflow-hidden ring-1 ring-line/50 shadow-[0_24px_50px_-30px_rgba(74,52,28,0.45)]">
+              <div className="mt-9 relative aspect-[4/5] lg:aspect-[3/4] rounded-xl overflow-hidden ring-1 ring-line/50 shadow-[0_24px_50px_-30px_rgba(74,52,28,0.45)]">
                 <Image
                   src="/photos/faq-cta.png"
                   alt="Velora Medical Institute — Frequently Asked Questions"

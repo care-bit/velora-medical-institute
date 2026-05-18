@@ -100,11 +100,8 @@ export default function ProgramsPage() {
 
               {/* Price block */}
               <div className="text-center md:text-left md:pr-12 md:border-r border-line/60">
-                <p className="text-[10px] tracking-[0.34em] uppercase text-brown font-semibold">
-                  Step One
-                </p>
                 <p
-                  className="mt-2 font-display text-ink leading-none tracking-[-0.02em]"
+                  className="font-display text-ink leading-none tracking-[-0.02em]"
                   style={{ fontSize: 'clamp(2.5rem, 3.6vw, 3.25rem)' }}
                 >
                   $295
@@ -145,9 +142,8 @@ export default function ProgramsPage() {
       <section id="pricing" className="bg-paper">
         <div className="container-velora pt-16 sm:pt-20 lg:pt-24 pb-12 sm:pb-14 lg:pb-20">
           <div className="text-center max-w-2xl mx-auto">
-            <ChapterEyebrow number="01" label="Choose Your Program" />
             <h2
-              className="mt-6 font-display text-ink leading-[1.06] tracking-[-0.018em]"
+              className="font-display text-ink leading-[1.06] tracking-[-0.018em]"
               style={{ fontSize: 'clamp(1.875rem, 3.6vw, 2.75rem)' }}
             >
               Three programs.
@@ -190,7 +186,6 @@ export default function ProgramsPage() {
               ]}
               cta="Start program"
               href="/hormone-therapy"
-              featured
             />
             <ProgramTier
               numeral="03"
@@ -206,6 +201,7 @@ export default function ProgramsPage() {
               ]}
               cta="Start program"
               href="/longevity"
+              featured
             />
           </div>
         </div>
@@ -286,7 +282,7 @@ export default function ProgramsPage() {
                 <ArrowRight className="size-3.5" />
               </Link>
 
-              <div className="mt-6 lg:mt-9 relative aspect-[16/10] sm:aspect-[4/3] rounded-xl overflow-hidden ring-1 ring-line/50 shadow-[0_24px_50px_-30px_rgba(74,52,28,0.45)]">
+              <div className="mt-6 lg:mt-9 relative aspect-[4/5] lg:aspect-[3/4] rounded-xl overflow-hidden ring-1 ring-line/50 shadow-[0_24px_50px_-30px_rgba(74,52,28,0.45)]">
                 <Image
                   src="/photos/faq-cta.png"
                   alt="Velora Medical Institute — Frequently Asked Questions"
