@@ -43,7 +43,7 @@ export default function HomePage() {
           <div className="mt-9 sm:mt-12 lg:mt-16 grid md:grid-cols-3 gap-7 lg:gap-9 max-w-6xl mx-auto">
             <ServiceCard
               href="/weight-management"
-              image="/photos/weight-loss-feature.png"
+              image="/photos/weight-mgmt-mirror.png"
               title="Weight Management"
               body="Physician-guided GLP-1 therapy and medical weight management programs to help you lose weight, improve metabolism, and sustain long-term results."
             />
