@@ -355,7 +355,7 @@ export default function WeightManagementPage() {
 
                 <Link
                   href="/book?type=weight"
-                  className="mt-8 hidden lg:inline-flex w-full items-center justify-center gap-2.5 bg-cream text-ink hover:bg-paper px-6 py-3.5 rounded-md text-[11px] tracking-[0.28em] uppercase font-semibold transition-colors"
+                  className="mt-8 inline-flex w-full items-center justify-center gap-2.5 bg-cream text-ink hover:bg-paper px-6 py-3.5 rounded-md text-[11px] tracking-[0.28em] uppercase font-semibold transition-colors"
                 >
                   Start Optimization Program
                   <ArrowRight className="size-4" strokeWidth={2} />
