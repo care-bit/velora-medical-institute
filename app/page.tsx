@@ -1,10 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import {
-  Calendar,
-  ArrowRight,
-  ShieldCheck,
-} from 'lucide-react'
+import { Calendar, ArrowRight } from 'lucide-react'
 import { HomeHero } from '@/components/site/home-hero'
 
 export default function HomePage() {
@@ -67,105 +63,31 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ===== YOUR PATH — Step 1: Begin with a conversation ===== */}
-      <section className="bg-bone">
-        <div className="container-velora pt-12 sm:pt-16 lg:pt-24 pb-10 sm:pb-14 lg:pb-20">
-          <div className="grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)] gap-8 sm:gap-10 lg:gap-14 xl:gap-20 items-center">
-            {/* LEFT — copy */}
-            <div className="max-w-[560px]">
-              <p className="text-[10.5px] tracking-[0.42em] uppercase text-brown font-semibold">
-                Start Your Journey
-              </p>
-              <h2
-                className="mt-6 font-display text-ink leading-[1.0] tracking-[-0.02em]"
-                style={{ fontSize: 'clamp(2.125rem, 4.4vw, 3.25rem)' }}
-              >
-                Personalized Care.
-                <br />
-                Guided by Physicians.
-                <br />
-                <em className="italic font-display text-brown">Designed for You.</em>
-              </h2>
-
-              <div className="mt-7 flex items-center gap-2.5">
-                <ShieldCheck className="size-4 text-brown shrink-0" strokeWidth={1.8} />
-                <span className="text-[12px] text-ink-soft leading-[1.45]">
-                  Double Board-Certified Physicians in Internal Medicine &amp; Obesity Medicine
-                </span>
-              </div>
-
-              <p className="mt-6 text-[14.5px] text-ink-soft leading-[1.75]">
-                Your health is unique. That&rsquo;s why every patient begins with a
-                comprehensive physician consultation to uncover the root causes, create
-                clarity, and build a plan tailored to your goals.
-              </p>
-
-              <div className="mt-8">
-                <Link
-                  href="/book"
-                  className="inline-flex items-center gap-2.5 bg-brown text-cream hover:bg-brown-deep px-6 py-4 sm:py-3.5 rounded-md text-[12.5px] sm:text-[11px] tracking-[0.24em] sm:tracking-[0.26em] uppercase font-semibold transition-colors"
-                >
-                  <Calendar className="size-4" strokeWidth={2} />
-                  Book Initial Consultation
-                </Link>
-              </div>
-            </div>
-
-            {/* RIGHT — photo with bigger callout card top-left */}
-            <div className="relative">
-              <div className="relative aspect-[4/3] lg:aspect-[5/4] xl:aspect-[6/5] rounded-2xl overflow-hidden shadow-[0_36px_70px_-30px_rgba(74,52,28,0.55)]">
-                <Image
-                  src="/photos/hero-telehealth.png"
-                  alt="Patient on a Velora telehealth visit with a physician"
-                  fill
-                  sizes="(min-width: 1024px) 55vw, 100vw"
-                  className="object-cover"
-                />
-              </div>
-              {/* "1 · Initial Consultation" callout — overlay on md+, hidden on mobile (photo isn't wide enough) */}
-              <div className="hidden md:block absolute top-5 left-5 md:top-7 md:left-7 w-[260px] md:w-[300px] bg-cream rounded-xl px-5 py-4 shadow-[0_24px_50px_-22px_rgba(74,52,28,0.55)] ring-1 ring-line/50">
-                <div className="flex items-center gap-3">
-                  <span className="size-9 rounded-full bg-brown text-cream flex items-center justify-center font-display text-[15px] shrink-0">
-                    1
-                  </span>
-                  <span className="text-[10.5px] tracking-[0.24em] uppercase text-ink font-semibold leading-[1.3]">
-                    Initial Consultation
-                    <br />
-                    <span className="text-brown">(Tele Visit)</span>
-                  </span>
-                </div>
-                <p className="mt-3 text-[12px] text-ink-soft leading-[1.55]">
-                  Comprehensive physician evaluation, lab review, and personalized
-                  plan tailored to your goals.
-                </p>
-              </div>
-            </div>
+      {/* ===== START YOUR JOURNEY — single editorial composite ===== */}
+      <section className="bg-bone" aria-label="Start your journey">
+        <div className="container-velora py-10 sm:py-12 lg:py-16">
+          <div className="relative max-w-6xl mx-auto">
+            <Image
+              src="/photos/start-your-journey.png"
+              alt="Start your journey — Book Initial Consult, See the Doctor, Choose Your Care Path. Two paths: A Individual Follow-Up Visits (flexible, pay-per-visit care) or B Structured Programs (recommended; guided plans for long-term results)."
+              width={1717}
+              height={916}
+              sizes="(min-width: 1024px) 1100px, 100vw"
+              className="w-full h-auto rounded-xl"
+              priority
+            />
+            {/* Clickable hotspots over the A and B cards */}
+            <Link
+              href="/individual-visits"
+              aria-label="View Individual Follow-Up Visits"
+              className="absolute left-[3%] top-[46%] w-[45%] h-[50%] rounded-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-brown"
+            />
+            <Link
+              href="/programs"
+              aria-label="View Structured Programs"
+              className="absolute left-[52%] top-[46%] w-[45%] h-[50%] rounded-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-brown"
+            />
           </div>
-        </div>
-      </section>
-
-      {/* ===== YOUR PATH — Step 2: Choose your care path (composite) ===== */}
-      <section className="bg-bone" aria-label="Choose your care path">
-        <div className="relative w-full">
-          <Image
-            src="/photos/carepath-section.png"
-            alt="Choose your care path — after your consultation we recommend the best path forward: Individual Follow-Up Visits (flexible, as-needed care) or Structured Programs (recommended; physician-guided weight management for lasting results). The difference: individual visits treat pieces, program-based care builds the whole foundation."
-            width={1536}
-            height={1024}
-            sizes="100vw"
-            className="w-full h-auto"
-          />
-          {/* Clickable hotspots over the in-image CTA buttons */}
-          <Link
-            href="/individual-visits"
-            aria-label="View Individual Visits"
-            className="absolute left-[15.5%] top-[70.5%] w-[17%] h-[6.5%] rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-brown"
-          />
-          <Link
-            href="/programs"
-            aria-label="View Programs"
-            className="absolute left-[67%] top-[70.5%] w-[17%] h-[6.5%] rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-brown"
-          />
         </div>
       </section>
 
