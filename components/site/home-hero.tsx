@@ -21,81 +21,66 @@ export function HomeHero() {
 
   return (
     <section className="relative bg-[#0B0907] text-cream -mt-[84px]">
-      <div className="lg:grid lg:grid-cols-[minmax(0,47fr)_minmax(0,53fr)] lg:items-stretch lg:min-h-[calc(100svh-58px)]">
+      <div className="grid grid-cols-[minmax(0,60fr)_minmax(0,40fr)] sm:grid-cols-[minmax(0,55fr)_minmax(0,45fr)] lg:grid-cols-[minmax(0,47fr)_minmax(0,53fr)] items-stretch min-h-[560px] sm:min-h-[640px] lg:min-h-[calc(100svh-58px)]">
 
         {/* ===== LEFT — text panel ===== */}
-        <div className="relative z-10 flex flex-col lg:justify-center px-6 sm:px-10 lg:pl-[max(3rem,calc((100vw-115rem)/2+4rem))] lg:pr-14 xl:pr-20 pt-[106px] sm:pt-[114px] lg:pt-[94px] pb-7 lg:pb-10">
-
-          {/* Mobile photo — leads at top */}
-          <div className="lg:hidden -mx-6 sm:-mx-10 mb-7 relative aspect-[16/10] sm:aspect-[16/9]">
-            <Image
-              src="/photos/hero-telehealth-main.png"
-              alt="A patient on a Velora telemedicine visit with a physician"
-              fill
-              sizes="100vw"
-              className="object-cover"
-              priority
-            />
-            <div
-              className="absolute inset-x-0 bottom-0 h-1/3 pointer-events-none"
-              style={{ background: `linear-gradient(to bottom, rgba(11,9,7,0), ${BG})` }}
-              aria-hidden
-            />
-          </div>
-
+        <div className="relative z-10 flex flex-col justify-center px-4 sm:px-7 lg:pl-[max(3rem,calc((100vw-115rem)/2+4rem))] lg:pr-14 xl:pr-20 pt-[100px] sm:pt-[110px] lg:pt-[94px] pb-8 lg:pb-10">
           <div className="max-w-[560px] w-full">
-            {/* Eyebrow */}
-            <div className="flex flex-wrap items-center gap-x-3 gap-y-2 text-[10px] sm:text-[11px] tracking-[0.26em] uppercase text-cream/90 font-semibold">
-              <span>Longevity Medicine</span>
+            {/* Eyebrow — wraps tightly on mobile */}
+            <div className="flex flex-wrap items-center gap-x-2 sm:gap-x-3 gap-y-1.5 text-[9px] sm:text-[10.5px] lg:text-[11px] tracking-[0.22em] sm:tracking-[0.26em] uppercase text-cream/90 font-semibold">
+              <span>Longevity</span>
               <span className="size-[3px] rounded-full bg-gold" aria-hidden />
-              <span>Obesity Medicine</span>
+              <span>Obesity</span>
               <span className="size-[3px] rounded-full bg-gold" aria-hidden />
-              <span>Hormone Therapy</span>
+              <span>Hormone</span>
             </div>
 
             {/* Headline */}
             <h1
-              className="mt-4 font-display leading-[1.04] tracking-[-0.02em]"
-              style={{ fontSize: 'clamp(1.75rem, 2.8vw, 2.625rem)' }}
+              className="mt-3 sm:mt-4 font-display leading-[1.05] tracking-[-0.02em]"
+              style={{ fontSize: 'clamp(1.25rem, 4.5vw, 2.625rem)' }}
             >
               <span className="text-cream">Physician-Guided</span>
               <br />
               <em className="not-italic font-display text-gold italic">Weight Loss &amp;</em>
               <br />
               <span className="text-cream">Hormone Optimization</span>
-              <br />
-              <span className="text-cream">Longevity &amp; Preventive Medicine</span>
+              <span className="hidden sm:inline">
+                <br />
+                <span className="text-cream">Longevity &amp; Preventive Medicine</span>
+              </span>
             </h1>
 
-            <div className="mt-5 w-16 h-px bg-gold" />
+            <div className="mt-4 sm:mt-5 w-10 sm:w-16 h-px bg-gold" />
 
-            {/* Body */}
-            <p className="mt-5 max-w-[440px] text-[13.5px] sm:text-[14.5px] leading-[1.65] text-cream/70">
-              Personalized telemedicine care for metabolic health, weight management,
+            {/* Body — shorter on mobile */}
+            <p className="mt-3 sm:mt-5 max-w-[440px] text-[11.5px] sm:text-[13.5px] lg:text-[14.5px] leading-[1.55] sm:leading-[1.65] text-cream/70">
+              <span className="hidden sm:inline">Personalized telemedicine care for metabolic health, weight management,
               and hormone balance &mdash; guided by physicians and refined over time
-              to support lasting results.
+              to support lasting results.</span>
+              <span className="sm:hidden">Physician-led telemedicine for metabolic health and hormone balance.</span>
             </p>
 
             {/* CTAs */}
-            <div className="mt-6 sm:mt-7 flex flex-col sm:flex-row gap-3 sm:gap-4">
+            <div className="mt-4 sm:mt-6 lg:mt-7 flex flex-col sm:flex-row gap-2 sm:gap-3 lg:gap-4">
               <Link
                 href="/book"
-                className="inline-flex items-center justify-center gap-2.5 bg-gold text-ink hover:bg-gold/90 px-7 py-4 rounded-md text-[11.5px] tracking-[0.2em] uppercase font-semibold transition-colors"
+                className="inline-flex items-center justify-center gap-1.5 sm:gap-2.5 bg-gold text-ink hover:bg-gold/90 px-3.5 sm:px-7 py-2.5 sm:py-4 rounded-md text-[10px] sm:text-[11.5px] tracking-[0.16em] sm:tracking-[0.2em] uppercase font-semibold transition-colors"
               >
-                <Calendar className="size-4" strokeWidth={2} />
+                <Calendar className="size-3.5 sm:size-4" strokeWidth={2} />
                 Book Consultation
               </Link>
               <Link
                 href="/programs"
-                className="inline-flex items-center justify-center gap-2.5 border border-cream/35 text-cream hover:bg-cream hover:text-ink px-7 py-4 rounded-md text-[11.5px] tracking-[0.2em] uppercase font-semibold transition-colors"
+                className="inline-flex items-center justify-center gap-1.5 sm:gap-2.5 border border-cream/35 text-cream hover:bg-cream hover:text-ink px-3.5 sm:px-7 py-2.5 sm:py-4 rounded-md text-[10px] sm:text-[11.5px] tracking-[0.16em] sm:tracking-[0.2em] uppercase font-semibold transition-colors"
               >
                 View Programs
-                <ArrowRight className="size-4" strokeWidth={2} />
+                <ArrowRight className="size-3.5 sm:size-4" strokeWidth={2} />
               </Link>
             </div>
 
-            {/* Trust row */}
-            <div className="mt-6 sm:mt-8 grid grid-cols-1 sm:grid-cols-3">
+            {/* Trust row — tablet+ only (no room in narrow mobile text column) */}
+            <div className="hidden sm:grid mt-6 sm:mt-8 grid-cols-1 sm:grid-cols-3">
               <TrustItem
                 icon={<Monitor className="size-5" strokeWidth={1.4} />}
                 title="Telemedicine Visits"
@@ -117,25 +102,25 @@ export function HomeHero() {
           </div>
         </div>
 
-        {/* ===== RIGHT — photo (desktop) ===== */}
-        <div className="relative hidden lg:block">
+        {/* ===== RIGHT — photo (all viewports), bleeds to right edge ===== */}
+        <div className="relative">
           <Image
             src="/photos/hero-telehealth-main.png"
             alt="A patient on a Velora telemedicine visit with a physician"
             fill
-            sizes="55vw"
+            sizes="(min-width: 1024px) 55vw, 45vw"
             className="object-cover object-center"
             priority
           />
-          {/* Left-edge fade so the photo melts into the dark panel */}
+          {/* Left-edge fade so the photo melts into the dark text panel */}
           <div
-            className="absolute inset-y-0 left-0 w-40 pointer-events-none"
-            style={{ background: `linear-gradient(to right, ${BG} 0%, rgba(11,9,7,0.5) 35%, rgba(11,9,7,0) 100%)` }}
+            className="absolute inset-y-0 left-0 w-20 sm:w-28 lg:w-40 pointer-events-none"
+            style={{ background: `linear-gradient(to right, ${BG} 0%, rgba(11,9,7,0.65) 40%, rgba(11,9,7,0) 100%)` }}
             aria-hidden
           />
           {/* Subtle top vignette for depth */}
           <div
-            className="absolute inset-x-0 top-0 h-28 pointer-events-none"
+            className="absolute inset-x-0 top-0 h-20 sm:h-28 pointer-events-none"
             style={{ background: `linear-gradient(to bottom, rgba(11,9,7,0.5), rgba(11,9,7,0))` }}
             aria-hidden
           />
