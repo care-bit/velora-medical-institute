@@ -49,7 +49,7 @@ export default function HomePage() {
             />
             <ServiceCard
               href="/hormone-therapy"
-              image="/photos/hormone-therapy-feature.png"
+              image="/photos/hormone-card-new.png"
               title="Hormone Optimization"
               body="Restore balance, improve energy, enhance mood, and support overall hormonal health through personalized hormone therapy."
             />
