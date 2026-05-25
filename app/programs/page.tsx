@@ -176,7 +176,7 @@ export default function ProgramsPage() {
               numeral="02"
               title="Hormone Optimization"
               price="$180"
-              cadenceTag="5 visit program · 40 min"
+              cadenceTag="5 visits over 12 months"
               total="$900 total"
               bullets={[
                 'Bioidentical hormone therapy',

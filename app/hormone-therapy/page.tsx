@@ -349,7 +349,7 @@ export default function HormoneTherapyPage() {
                   </div>
                   <div className="rounded-xl bg-cream/8 ring-1 ring-cream/15 px-4 py-3.5">
                     <p className="text-[10px] tracking-[0.24em] uppercase text-gold font-semibold">Duration</p>
-                    <p className="mt-2 font-display text-[22px] leading-none text-cream">~6 months</p>
+                    <p className="mt-2 font-display text-[22px] leading-none text-cream">12 months</p>
                     <p className="mt-1.5 text-[11.5px] text-cream/75">Initiation to optimization</p>
                   </div>
                 </div>
@@ -545,7 +545,7 @@ export default function HormoneTherapyPage() {
                     Start Optimization Program
                   </h3>
                   <p className="mt-3 text-[13.5px] text-cream/80 leading-[1.55] max-w-[320px]">
-                    5 physician visits over ~6 months. Initiate, optimize, stabilize. $900.
+                    5 physician visits over 12 months. Initiate, optimize, stabilize. $900.
                   </p>
                 </div>
                 <span className="relative mt-5 inline-flex items-center gap-2 text-[11px] tracking-[0.28em] uppercase text-gold font-semibold border-b border-gold/40 group-hover:border-gold pb-1.5 w-fit transition-colors">
