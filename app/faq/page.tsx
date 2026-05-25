@@ -2,9 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import type { Metadata } from 'next'
 import { Calendar, ArrowRight } from 'lucide-react'
-import { Section, SectionHeading } from '@/components/site/section'
 import { FaqAccordion } from '@/components/site/faq-accordion'
-import { VeloraMark } from '@/components/site/logo'
 
 export const metadata: Metadata = {
   title: 'Frequently Asked Questions',
@@ -39,12 +37,18 @@ const PRACTICE_FAQ = [
   { q: 'Are medication and laboratory costs included?', a: 'No. Visit fees cover physician time and clinical care. Medication, pharmacy, and laboratory costs are billed separately by the respective provider. Your physician will discuss expected costs during your visit.' },
 ]
 
+const CATEGORIES = [
+  { id: 'weight', label: 'Weight Management' },
+  { id: 'hormone', label: 'Hormone Therapy' },
+  { id: 'practice', label: 'Practice & Payment' },
+] as const
+
 export default function FaqPage() {
   return (
     <>
-      {/* HERO — clean mountain sunset, V leaf + headline overlay */}
+      {/* ===== HERO — single editorial moment ===== */}
       <section className="relative overflow-hidden">
-        <div className="relative h-[52vh] min-h-[390px] lg:h-[70vh] lg:min-h-[520px] max-h-[720px]">
+        <div className="relative h-[44vh] min-h-[340px] lg:h-[52vh] lg:min-h-[420px] max-h-[560px]">
           <Image
             src="/photos/faq-mountain.png"
             alt="Mountain sunset"
@@ -53,38 +57,86 @@ export default function FaqPage() {
             sizes="100vw"
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/45 to-black/65" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/65 to-black/80" />
 
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
-            <VeloraMark size={64} />
-            <p className="mt-3 font-display tracking-[0.42em] text-[20px] sm:text-[24px] text-cream leading-none">
-              VELORA
+            <p className="text-[10px] sm:text-[10.5px] tracking-[0.42em] uppercase text-gold font-semibold">
+              Frequently Asked Questions
             </p>
-            <p className="mt-2 font-sans tracking-[0.42em] text-[9.5px] text-gold leading-none uppercase">
-              Medical Institute
+            <h1
+              className="mt-5 font-display leading-[1.04] tracking-[-0.018em] text-cream max-w-3xl"
+              style={{ fontSize: 'clamp(2rem, 4.6vw, 3.5rem)' }}
+            >
+              Real answers from{' '}
+              <em className="italic font-display text-gold">your physician.</em>
+            </h1>
+            <p className="mt-4 max-w-xl text-[13.5px] sm:text-[14.5px] leading-[1.6] text-cream/80">
+              Telemedicine, GLP-1 weight management, hormone therapy, longevity care,
+              direct-pay billing &mdash; explained plainly.
             </p>
 
-            <h1
-              className="mt-10 font-display leading-[1.05] tracking-[-0.018em] text-cream max-w-3xl"
-              style={{ fontSize: 'clamp(2.25rem, 5.4vw, 4rem)' }}
-            >
-              Frequently Asked Questions
-            </h1>
-            <p className="mt-5 max-w-xl text-[14.5px] leading-[1.65] text-cream/80">
-              Real answers to the questions patients ask most about telemedicine, GLP-1 weight
-              management, hormone therapy, and longevity care.
-            </p>
-            <div className="mt-7 flex flex-wrap items-center justify-center gap-3">
+            {/* Category jump links */}
+            <nav className="mt-6 flex flex-wrap items-center justify-center gap-2.5">
+              {CATEGORIES.map((c) => (
+                <Link
+                  key={c.id}
+                  href={`#${c.id}`}
+                  className="inline-flex items-center gap-2 rounded-full border border-cream/40 text-cream/95 hover:bg-cream hover:text-ink px-4 py-2 text-[10.5px] tracking-[0.22em] uppercase font-semibold transition-colors"
+                >
+                  {c.label}
+                </Link>
+              ))}
+            </nav>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== ONE consolidated FAQ section ===== */}
+      <section className="bg-bone">
+        <div className="container-velora py-12 lg:py-16">
+          <div className="max-w-3xl mx-auto space-y-12 lg:space-y-16">
+
+            <CategoryBlock id="weight" label="Weight Management" intro="GLP-1 medications, eligibility, individualized care, and results — explained by your physician.">
+              <FaqAccordion items={WEIGHT_FAQ} />
+            </CategoryBlock>
+
+            <CategoryBlock id="hormone" label="Hormone Therapy" intro="BHRT for men and women — symptoms, safety, and what to expect.">
+              <FaqAccordion items={HORMONE_FAQ} />
+            </CategoryBlock>
+
+            <CategoryBlock id="practice" label="Practice & Payment" intro="Direct-pay, telemedicine, scheduling, and policies.">
+              <FaqAccordion items={PRACTICE_FAQ} />
+            </CategoryBlock>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== Tight brown closer ===== */}
+      <section className="bg-brown text-cream">
+        <div className="container-velora py-8 lg:py-10">
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] items-center gap-6 max-w-4xl mx-auto">
+            <div className="text-center md:text-left">
+              <p className="text-[10.5px] tracking-[0.32em] uppercase text-gold font-semibold">
+                Still Have Questions?
+              </p>
+              <h2
+                className="mt-2 font-display leading-[1.1] tracking-[-0.012em]"
+                style={{ fontSize: 'clamp(1.375rem, 2.2vw, 1.75rem)' }}
+              >
+                Talk to a physician.
+              </h2>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-3 shrink-0">
               <Link
                 href="/book"
-                className="inline-flex items-center gap-2 bg-brown text-cream hover:bg-brown-deep px-6 py-3.5 rounded-md text-[11px] tracking-[0.24em] uppercase font-semibold transition-colors"
+                className="inline-flex items-center justify-center gap-2 bg-cream text-brown hover:bg-paper px-6 py-3.5 rounded-md text-[11px] tracking-[0.24em] uppercase font-semibold transition-colors"
               >
                 <Calendar className="size-4" strokeWidth={2} />
                 Schedule Consultation
               </Link>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 border border-cream/50 text-cream hover:bg-cream/10 px-6 py-3.5 rounded-md text-[11px] tracking-[0.24em] uppercase font-semibold transition-colors"
+                className="inline-flex items-center justify-center gap-2 border border-cream/40 text-cream hover:bg-cream/10 px-6 py-3.5 rounded-md text-[11px] tracking-[0.24em] uppercase font-semibold transition-colors"
               >
                 Contact the Practice
                 <ArrowRight className="size-3.5" />
@@ -93,115 +145,33 @@ export default function FaqPage() {
           </div>
         </div>
       </section>
-
-      <Section bg="bone" id="weight">
-        <div className="grid lg:grid-cols-12 gap-12 items-start">
-          <div className="lg:col-span-4 lg:sticky lg:top-32">
-            <SectionHeading
-              eyebrow="Weight Management"
-              title={<>Medical weight <em className="not-italic text-brown">care</em>.</>}
-            />
-            <p className="mt-7 text-[15px] text-ink-soft leading-relaxed">
-              GLP-1 medications, eligibility, individualized care, and results — explained by your physician.
-            </p>
-            <div className="mt-6 lg:mt-8 relative aspect-[4/5] lg:aspect-[3/4] rounded-xl overflow-hidden ring-1 ring-line/50 shadow-[0_24px_50px_-30px_rgba(74,52,28,0.45)]">
-              <Image
-                src="/photos/faq-cta.png"
-                alt="Velora Medical Institute — Frequently Asked Questions"
-                fill
-                sizes="(min-width: 1024px) 32vw, 100vw"
-                className="object-cover"
-              />
-            </div>
-          </div>
-          <div className="lg:col-span-8">
-            <FaqAccordion items={WEIGHT_FAQ} defaultOpen={0} />
-          </div>
-        </div>
-      </Section>
-
-      <Section bg="cream" id="hormone">
-        <div className="grid lg:grid-cols-12 gap-12 items-start">
-          <div className="lg:col-span-4 lg:sticky lg:top-32">
-            <SectionHeading
-              eyebrow="Hormone Therapy"
-              title={<>Bioidentical <em className="not-italic text-brown">hormone</em> care.</>}
-            />
-            <p className="mt-7 text-[15px] text-ink-soft leading-relaxed">
-              BHRT for men and women — symptoms, safety, and what to expect.
-            </p>
-            <div className="mt-6 lg:mt-8 relative aspect-[4/5] lg:aspect-[3/4] rounded-xl overflow-hidden ring-1 ring-line/50 shadow-[0_24px_50px_-30px_rgba(74,52,28,0.45)]">
-              <Image
-                src="/photos/faq-cta.png"
-                alt="Velora Medical Institute — Frequently Asked Questions"
-                fill
-                sizes="(min-width: 1024px) 32vw, 100vw"
-                className="object-cover"
-              />
-            </div>
-          </div>
-          <div className="lg:col-span-8">
-            <FaqAccordion items={HORMONE_FAQ} defaultOpen={0} />
-          </div>
-        </div>
-      </Section>
-
-      <Section bg="bone" id="practice">
-        <div className="grid lg:grid-cols-12 gap-12 items-start">
-          <div className="lg:col-span-4 lg:sticky lg:top-32">
-            <SectionHeading
-              eyebrow="Practice & Payment"
-              title={<>About <em className="not-italic text-brown">Velora</em>.</>}
-            />
-            <p className="mt-7 text-[15px] text-ink-soft leading-relaxed">
-              Direct-pay, telemedicine, scheduling, and policies.
-            </p>
-            <div className="mt-6 lg:mt-8 relative aspect-[4/5] lg:aspect-[3/4] rounded-xl overflow-hidden ring-1 ring-line/50 shadow-[0_24px_50px_-30px_rgba(74,52,28,0.45)]">
-              <Image
-                src="/photos/faq-cta.png"
-                alt="Velora Medical Institute — Frequently Asked Questions"
-                fill
-                sizes="(min-width: 1024px) 32vw, 100vw"
-                className="object-cover"
-              />
-            </div>
-          </div>
-          <div className="lg:col-span-8">
-            <FaqAccordion items={PRACTICE_FAQ} defaultOpen={0} />
-          </div>
-        </div>
-      </Section>
-
-      <section className="bg-bone">
-        <div className="container-velora py-14">
-          <div className="bg-brown text-cream rounded-2xl px-8 md:px-14 py-12 text-center">
-            <p className="text-[10.5px] tracking-[0.32em] uppercase text-gold font-semibold">
-              Still Have Questions?
-            </p>
-            <h2
-              className="mt-4 font-display leading-[1.05] tracking-[-0.018em]"
-              style={{ fontSize: 'clamp(1.625rem, 3.4vw, 2.5rem)' }}
-            >
-              Schedule a comprehensive evaluation with a physician.
-            </h2>
-            <div className="mt-7 flex flex-wrap items-center justify-center gap-3">
-              <Link
-                href="/book"
-                className="inline-flex items-center gap-2 bg-cream text-brown hover:bg-paper px-6 py-3.5 rounded-md text-[11px] tracking-[0.24em] uppercase font-semibold transition-colors"
-              >
-                <Calendar className="size-4" strokeWidth={2} />
-                Book Your Consultation
-              </Link>
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 border border-cream/40 text-cream hover:bg-cream/10 px-6 py-3.5 rounded-md text-[11px] tracking-[0.24em] uppercase font-semibold transition-colors"
-              >
-                Contact the Practice
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
     </>
+  )
+}
+
+function CategoryBlock({
+  id,
+  label,
+  intro,
+  children,
+}: {
+  id: string
+  label: string
+  intro: string
+  children: React.ReactNode
+}) {
+  return (
+    <div id={id} className="scroll-mt-28">
+      <div className="flex items-center gap-3">
+        <span className="w-8 h-px bg-gold/70" />
+        <p className="text-[10px] sm:text-[10.5px] tracking-[0.36em] uppercase text-brown font-semibold">
+          {label}
+        </p>
+      </div>
+      <p className="mt-3 text-[13.5px] sm:text-[14px] text-ink-soft leading-[1.65] max-w-[640px]">
+        {intro}
+      </p>
+      <div className="mt-5">{children}</div>
+    </div>
   )
 }
