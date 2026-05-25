@@ -568,9 +568,9 @@ export default function HormoneTherapyPage() {
                 className="mt-7 font-display text-ink leading-[1.04] tracking-[-0.018em]"
                 style={{ fontSize: 'clamp(1.75rem, 3.6vw, 2.625rem)' }}
               >
-                Questions, answered
+                Questions,
                 <br />
-                <em className="italic font-display text-brown">honestly.</em>
+                <em className="italic font-display text-brown">answered.</em>
               </h2>
               <p className="mt-7 text-[13.5px] text-ink-soft leading-[1.7] max-w-[360px]">
                 Still have questions about hormone therapy? Reach out and a physician will
