@@ -55,7 +55,7 @@ export default function HomePage() {
             />
             <ServiceCard
               href="/longevity"
-              image="/photos/longevity-summit.png"
+              image="/photos/longevity-summit-sunset.png"
               title="Longevity & Preventive Medicine"
               body="Proactive, personalized strategies to optimize health, prevent disease, and support long-term vitality."
             />
