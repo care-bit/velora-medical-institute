@@ -66,26 +66,31 @@ export default function HomePage() {
       {/* ===== START YOUR JOURNEY — single editorial composite ===== */}
       <section className="bg-bone" aria-label="Start your journey">
         <div className="container-velora py-10 sm:py-12 lg:py-16">
-          <div className="relative max-w-6xl mx-auto">
+          <div className="relative max-w-[640px] lg:max-w-[720px] mx-auto">
             <Image
               src="/photos/start-your-journey.png"
-              alt="Start your journey — Book Initial Consult, See the Doctor, Choose Your Care Path. Two paths: A Individual Follow-Up Visits (flexible, pay-per-visit care) or B Structured Programs (recommended; guided plans for long-term results)."
-              width={1717}
-              height={916}
-              sizes="(min-width: 1024px) 1100px, 100vw"
+              alt="Start Your Journey — Book Initial Consultation. Board-certified physicians, evidence-based care, physician-led telemedicine. Three steps: 1 Book a tele-visit, 2 Meet to discuss goals, 3 Choose your care plan. Then choose your care path — A Individual Follow-Up Visits (flexible scheduling, pay per visit, care as needed) or B Structured Programs (recommended; physician-guided care, long-term results, ongoing accountability)."
+              width={1024}
+              height={1536}
+              sizes="(min-width: 1024px) 720px, (min-width: 640px) 640px, 100vw"
               className="w-full h-auto rounded-xl"
               priority
             />
-            {/* Clickable hotspots over the A and B cards */}
+            {/* Clickable hotspots over the A and B cards (image is portrait) */}
+            <Link
+              href="/book"
+              aria-label="Book Initial Consultation"
+              className="absolute left-[28%] top-[15.5%] w-[44%] h-[5%] rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-brown"
+            />
             <Link
               href="/individual-visits"
               aria-label="View Individual Follow-Up Visits"
-              className="absolute left-[3%] top-[46%] w-[45%] h-[50%] rounded-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-brown"
+              className="absolute left-[4%] top-[59%] w-[44%] h-[39%] rounded-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-brown"
             />
             <Link
               href="/programs"
               aria-label="View Structured Programs"
-              className="absolute left-[52%] top-[46%] w-[45%] h-[50%] rounded-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-brown"
+              className="absolute left-[52%] top-[59%] w-[44%] h-[39%] rounded-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-brown"
             />
           </div>
         </div>
