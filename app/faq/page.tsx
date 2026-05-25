@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import Image from 'next/image'
 import type { Metadata } from 'next'
 import { Calendar, ArrowRight } from 'lucide-react'
 import { FaqAccordion } from '@/components/site/faq-accordion'
@@ -46,48 +45,46 @@ const CATEGORIES = [
 export default function FaqPage() {
   return (
     <>
-      {/* ===== HERO — single editorial moment ===== */}
-      <section className="relative overflow-hidden">
-        <div className="relative h-[44vh] min-h-[340px] lg:h-[52vh] lg:min-h-[420px] max-h-[560px]">
-          <Image
-            src="/photos/faq-mountain.png"
-            alt="Mountain sunset"
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/65 to-black/80" />
+      {/* ===== HERO — dark band, no photo (the photo has baked text) ===== */}
+      <section className="relative bg-[#0B0907] text-cream overflow-hidden">
+        {/* Subtle warm key light top-right for depth (no photo) */}
+        <div
+          className="absolute -top-32 -right-32 w-[700px] h-[520px] opacity-25 pointer-events-none"
+          style={{
+            background: 'radial-gradient(closest-side, rgba(201,160,100,0.55), rgba(201,160,100,0) 70%)',
+            filter: 'blur(70px)',
+          }}
+          aria-hidden
+        />
 
-          <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
-            <p className="text-[10px] sm:text-[10.5px] tracking-[0.42em] uppercase text-gold font-semibold">
-              Frequently Asked Questions
-            </p>
-            <h1
-              className="mt-5 font-display leading-[1.04] tracking-[-0.018em] text-cream max-w-3xl"
-              style={{ fontSize: 'clamp(2rem, 4.6vw, 3.5rem)' }}
-            >
-              Real answers from{' '}
-              <em className="italic font-display text-gold">your physician.</em>
-            </h1>
-            <p className="mt-4 max-w-xl text-[13.5px] sm:text-[14.5px] leading-[1.6] text-cream/80">
-              Telemedicine, GLP-1 weight management, hormone therapy, longevity care,
-              direct-pay billing &mdash; explained plainly.
-            </p>
+        <div className="relative container-velora py-14 sm:py-16 lg:py-20 text-center">
+          <p className="text-[10px] sm:text-[10.5px] tracking-[0.42em] uppercase text-gold font-semibold">
+            Frequently Asked Questions
+          </p>
+          <h1
+            className="mt-4 font-display leading-[1.04] tracking-[-0.018em] text-cream max-w-3xl mx-auto"
+            style={{ fontSize: 'clamp(1.875rem, 4.4vw, 3.25rem)' }}
+          >
+            Real answers from{' '}
+            <em className="italic font-display text-gold">your physician.</em>
+          </h1>
+          <p className="mt-4 max-w-xl mx-auto text-[13.5px] sm:text-[14.5px] leading-[1.6] text-cream/75">
+            Telemedicine, GLP-1 weight management, hormone therapy, longevity care,
+            direct-pay billing &mdash; explained plainly.
+          </p>
 
-            {/* Category jump links */}
-            <nav className="mt-6 flex flex-wrap items-center justify-center gap-2.5">
-              {CATEGORIES.map((c) => (
-                <Link
-                  key={c.id}
-                  href={`#${c.id}`}
-                  className="inline-flex items-center gap-2 rounded-full border border-cream/40 text-cream/95 hover:bg-cream hover:text-ink px-4 py-2 text-[10.5px] tracking-[0.22em] uppercase font-semibold transition-colors"
-                >
-                  {c.label}
-                </Link>
-              ))}
-            </nav>
-          </div>
+          {/* Category jump links */}
+          <nav className="mt-7 flex flex-wrap items-center justify-center gap-2.5">
+            {CATEGORIES.map((c) => (
+              <Link
+                key={c.id}
+                href={`#${c.id}`}
+                className="inline-flex items-center gap-2 rounded-full border border-cream/40 text-cream/95 hover:bg-gold hover:border-gold hover:text-ink px-4 py-2 text-[10.5px] tracking-[0.22em] uppercase font-semibold transition-colors"
+              >
+                {c.label}
+              </Link>
+            ))}
+          </nav>
         </div>
       </section>
 
