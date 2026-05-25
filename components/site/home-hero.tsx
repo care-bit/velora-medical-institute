@@ -23,7 +23,7 @@ export function HomeHero() {
 
         {/* ===== FULL-BLEED PHOTO — entire hero background, uncropped ===== */}
         <Image
-          src="/photos/hero-telehealth-main.png"
+          src="/photos/hero-telehealth-light.png"
           alt="A patient on a Velora telemedicine visit with a physician"
           fill
           sizes="100vw"

@@ -83,8 +83,8 @@ export default function HormoneTherapyPage() {
             <div className="relative">
               <div className="relative aspect-[8/5] rounded-2xl overflow-hidden shadow-[0_40px_80px_-30px_rgba(74,52,28,0.55)] ring-1 ring-line/40">
                 <Image
-                  src="/photos/hormone-therapy-feature.png"
-                  alt="Velora Medical Institute — Hormone Therapy. Restore balance. Renew energy. Reclaim you."
+                  src="/photos/hormone-card-new.png"
+                  alt="A woman holding a Velora prescription injector beside the Velora hormone therapy program packaging"
                   fill
                   sizes="(min-width: 1024px) 55vw, 100vw"
                   className="object-cover object-center"

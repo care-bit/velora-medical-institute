@@ -84,8 +84,8 @@ export default function LongevityPage() {
             <div className="relative">
               <div className="relative aspect-[16/10] rounded-2xl overflow-hidden shadow-[0_40px_80px_-30px_rgba(74,52,28,0.55)] ring-1 ring-line/40">
                 <Image
-                  src="/photos/longevity-full.png"
-                  alt="Velora Physician-Guided Longevity Care framework: cellular health, hormone optimization, sleep and stress optimization, recovery and performance, health, inflammation control — surrounding a couple resting at a coastal retreat in warm sunset light"
+                  src="/photos/longevity-summit.png"
+                  alt="Two women in Velora Longevity & Preventive Medicine branded jackets on a mountain ridge overlooking the ocean — physician-guided longevity care"
                   fill
                   sizes="(min-width: 1024px) 55vw, 100vw"
                   className="object-cover object-center"

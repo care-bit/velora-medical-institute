@@ -83,8 +83,8 @@ export default function WeightManagementPage() {
             <div className="relative">
               <div className="relative aspect-[16/10] rounded-2xl overflow-hidden shadow-[0_40px_80px_-30px_rgba(74,52,28,0.55)] ring-1 ring-line/40">
                 <Image
-                  src="/photos/weight-loss-feature.png"
-                  alt="Velora Medical Institute — Weight Loss. Personalized. Science-backed. Sustainable."
+                  src="/photos/weight-mgmt-mirror.png"
+                  alt="A woman looking at her reflection in a Velora Weight Management mirror — physician-guided weight care"
                   fill
                   sizes="(min-width: 1024px) 55vw, 100vw"
                   className="object-cover object-center"
