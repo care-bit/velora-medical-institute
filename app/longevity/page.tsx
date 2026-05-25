@@ -368,53 +368,6 @@ export default function LongevityPage() {
         </div>
       </section>
 
-      {/* ===== 04 · YOUR OPTIMIZATION JOURNEY — 3 phases (desktop only) ===== */}
-      <section className="hidden lg:block bg-bone border-t border-line/40">
-        <div className="container-velora py-12 sm:py-16 lg:py-28">
-          <div className="text-center max-w-2xl mx-auto">
-            <ChapterEyebrow number="04" label="Your Optimization Journey" />
-            <h2
-              className="mt-7 font-display text-ink leading-[1.04] tracking-[-0.018em]"
-              style={{ fontSize: 'clamp(1.625rem, 3.4vw, 2.375rem)' }}
-            >
-              Three phases of physician-guided
-              <br />
-              <em className="italic font-display text-brown">long-term optimization.</em>
-            </h2>
-          </div>
-
-          <div className="mt-10 lg:mt-16 grid lg:grid-cols-3 gap-6 lg:gap-8">
-            <PhaseCard
-              phase="Phase 1"
-              title="Initial Optimization"
-              subtitle="Weeks 2 — 8"
-              visits={[
-                { label: 'Week 2', body: 'Assessment of initial treatment response, medication tolerance, and symptom improvement.' },
-                { label: 'Week 4', body: 'Focused reassessment of metabolic and hormone optimization with treatment refinement.' },
-                { label: 'Week 8', body: 'Comprehensive review of clinical progress, laboratory findings when indicated, and ongoing optimization strategy.' },
-              ]}
-            />
-            <PhaseCard
-              phase="Phase 2"
-              title="Active Optimization"
-              subtitle="Months 3 — 6"
-              visits={[
-                { label: 'Month 3', body: 'Focused on long-term metabolic and hormone optimization, wellness goals, and preventive assessment.' },
-                { label: 'Month 6', body: 'Comprehensive reassessment including laboratory interpretation, medication adjustment, and long-term planning.' },
-              ]}
-            />
-            <PhaseCard
-              phase="Phase 3"
-              title="Long-Term Maintenance"
-              subtitle="Ongoing"
-              visits={[
-                { label: 'Continued Care', body: 'Sustaining results · long-term metabolic health · hormone balance · preventive wellness · healthy aging strategies · continuous optimization over time.' },
-              ]}
-            />
-          </div>
-        </div>
-      </section>
-
       {/* ===== 05 · WHY PHYSICIAN-GUIDED (desktop only) ===== */}
       <section className="hidden lg:block bg-paper border-t border-line/40">
         <div className="container-velora py-12 sm:py-16 lg:py-24">

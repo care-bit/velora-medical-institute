@@ -345,7 +345,7 @@ export default function HormoneTherapyPage() {
                   <div className="rounded-xl bg-cream/8 ring-1 ring-cream/15 px-4 py-3.5">
                     <p className="text-[10px] tracking-[0.24em] uppercase text-gold font-semibold">Visits</p>
                     <p className="mt-2 font-display text-[22px] leading-none text-cream">5 total</p>
-                    <p className="mt-1.5 text-[11.5px] text-cream/75">40-minute sessions</p>
+                    <p className="mt-1.5 text-[11.5px] text-cream/75">30-minute sessions</p>
                   </div>
                   <div className="rounded-xl bg-cream/8 ring-1 ring-cream/15 px-4 py-3.5">
                     <p className="text-[10px] tracking-[0.24em] uppercase text-gold font-semibold">Duration</p>
@@ -363,52 +363,6 @@ export default function HormoneTherapyPage() {
                 </Link>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ===== 04 · YOUR OPTIMIZATION JOURNEY (desktop only) ===== */}
-      <section className="hidden lg:block bg-bone border-t border-line/40">
-        <div className="container-velora py-12 sm:py-16 lg:py-28">
-          <div className="text-center max-w-2xl mx-auto">
-            <ChapterEyebrow number="04" label="Your Optimization Journey" />
-            <h2
-              className="mt-7 font-display text-ink leading-[1.04] tracking-[-0.018em]"
-              style={{ fontSize: 'clamp(1.625rem, 3.4vw, 2.375rem)' }}
-            >
-              Three phases of physician-guided
-              <br />
-              <em className="italic font-display text-brown">hormone optimization.</em>
-            </h2>
-          </div>
-
-          <div className="mt-10 lg:mt-16 grid lg:grid-cols-3 gap-6 lg:gap-8">
-            <PhaseCard
-              phase="Phase 1"
-              title="Lab Panel & Protocol Design"
-              subtitle="Weeks 1 — 2"
-              visits={[
-                { label: 'Initial Consultation', body: 'Comprehensive intake, hormonal and symptom assessment, and full laboratory strategy.' },
-                { label: 'Protocol Review', body: 'Lab results interpreted in clinical context and bioidentical protocol finalized for initiation.' },
-              ]}
-            />
-            <PhaseCard
-              phase="Phase 2"
-              title="Initiation & First Response"
-              subtitle="Weeks 4 — 8"
-              visits={[
-                { label: 'Week 4', body: 'Tolerance check, initial symptom shifts, dosage refinement based on clinical response.' },
-                { label: 'Week 8', body: 'Follow-up lab review, symptom reassessment, and continued protocol optimization.' },
-              ]}
-            />
-            <PhaseCard
-              phase="Phase 3"
-              title="Long-Term Stabilization"
-              subtitle="Month 6 → Ongoing"
-              visits={[
-                { label: 'Stabilization Visit', body: 'Comprehensive reassessment, lab interpretation, and long-term plan: sustained balance, ongoing monitoring, continuous optimization.' },
-              ]}
-            />
           </div>
         </div>
       </section>

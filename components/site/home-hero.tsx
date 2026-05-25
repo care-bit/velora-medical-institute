@@ -107,10 +107,9 @@ export function HomeHero() {
 
             {/* Body */}
             <p className="mt-3 sm:mt-5 max-w-[440px] text-[11.5px] sm:text-[13.5px] lg:text-[14.5px] leading-[1.55] sm:leading-[1.65] text-cream/80">
-              <span className="hidden sm:inline">Personalized telemedicine care for metabolic health, weight management,
-              and hormone balance &mdash; guided by physicians and refined over time
-              to support lasting results.</span>
-              <span className="sm:hidden">Physician-led telemedicine for metabolic health and hormone balance.</span>
+              Personalized telemedicine care for metabolic health, weight management,
+              and hormone balance &mdash; guided by double board-certified physicians and
+              refined over time to support lasting results.
             </p>
 
             {/* CTAs */}
