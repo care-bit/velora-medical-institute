@@ -23,7 +23,7 @@ export default function ProgramsPage() {
         <div className="lg:grid lg:grid-cols-[minmax(0,48fr)_minmax(0,52fr)] lg:items-stretch">
 
           {/* LEFT — copy panel */}
-          <div className="relative z-10 px-6 sm:px-10 lg:pl-[max(3rem,calc((100vw-115rem)/2+4rem))] lg:pr-16 pt-10 sm:pt-12 lg:pt-16 pb-12 sm:pb-14 lg:pb-20">
+          <div className="relative z-10 px-6 sm:px-10 lg:pl-[max(3rem,calc((100vw-115rem)/2+4rem))] lg:pr-16 pt-8 sm:pt-10 lg:pt-14 pb-10 sm:pb-12 lg:pb-16">
             {/* Mobile photo — leads on top */}
             <div className="lg:hidden -mx-6 sm:-mx-10 mb-9 relative aspect-[16/10]">
               <Image
@@ -140,23 +140,23 @@ export default function ProgramsPage() {
 
       {/* ===== THE PROGRAMS — three flat-per-visit tiers ===== */}
       <section id="pricing" className="bg-paper">
-        <div className="container-velora pt-16 sm:pt-20 lg:pt-24 pb-12 sm:pb-14 lg:pb-20">
+        <div className="container-velora pt-14 sm:pt-16 lg:pt-20 pb-10 lg:pb-14">
           <div className="text-center max-w-2xl mx-auto">
             <h2
               className="font-display text-ink leading-[1.06] tracking-[-0.018em]"
-              style={{ fontSize: 'clamp(1.875rem, 3.6vw, 2.75rem)' }}
+              style={{ fontSize: 'clamp(1.75rem, 3.4vw, 2.5rem)' }}
             >
               Three programs.
               <br />
               <em className="italic font-display text-brown">One standard of care.</em>
             </h2>
-            <p className="mt-5 text-[14px] text-ink-soft leading-[1.7] max-w-xl mx-auto">
+            <p className="mt-4 text-[14px] text-ink-soft leading-[1.65] max-w-xl mx-auto">
               Flat per-visit pricing. No prepayment required &mdash; you pay as you go,
               visit by visit.
             </p>
           </div>
 
-          <div className="mt-10 lg:mt-14 grid md:grid-cols-3 gap-5 lg:gap-6 items-stretch max-w-6xl mx-auto">
+          <div className="mt-8 lg:mt-12 grid md:grid-cols-3 gap-5 lg:gap-6 items-stretch max-w-6xl mx-auto">
             <ProgramTier
               numeral="01"
               title="Medical Weight Management"
@@ -207,82 +207,83 @@ export default function ProgramsPage() {
         </div>
       </section>
 
-      {/* ===== ALSO BILLED SEPARATELY — transparency strip ===== */}
+      {/* ===== WHY DIRECT-PAY + ALSO BILLED SEPARATELY — merged band ===== */}
       <section className="bg-bone border-t border-line/40">
-        <div className="container-velora py-8 sm:py-10 lg:py-14">
-          <div className="max-w-5xl mx-auto">
-            <div className="flex items-center gap-3">
-              <ShieldCheck className="size-4 text-brown" strokeWidth={1.8} />
-              <p className="text-[10.5px] tracking-[0.32em] uppercase text-brown font-semibold">
-                Also Billed Separately
+        <div className="container-velora py-10 lg:py-14">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-14 max-w-6xl mx-auto items-start">
+
+            {/* LEFT — Why Direct-Pay (full statement kept) */}
+            <div>
+              <ChapterEyebrow number="02" label="Why Direct-Pay" />
+              <h2
+                className="mt-5 font-display text-ink leading-[1.06] tracking-[-0.018em]"
+                style={{ fontSize: 'clamp(1.5rem, 2.8vw, 2rem)' }}
+              >
+                The plan we recommend
+                <br />
+                <em className="italic font-display text-brown">is the plan you receive.</em>
+              </h2>
+              <div className="mt-5 w-10 h-px bg-gold/80" />
+              <p className="mt-5 text-[14px] text-ink-soft leading-[1.7]">
+                Direct-pay means your physician&rsquo;s time and clinical judgment are not constrained
+                by insurance approvals, coverage limits, or coding requirements. You pay only
+                for the care you receive &mdash; no membership fees, no prior authorizations,
+                no surprise billing. The result is a longer visit, a better plan, and the
+                same physician at every appointment.
               </p>
             </div>
-            <p className="mt-3 text-[14px] text-ink-soft leading-[1.7] max-w-3xl">
-              Medications, compounding, and laboratory testing are itemized and billed at cost.
-              Your physician will review pricing with you before any treatment is started &mdash;
-              there are no surprise charges.
-            </p>
-            <div className="mt-7 grid sm:grid-cols-3 gap-y-3 gap-x-10 text-[12.5px] text-ink-soft">
-              <BilledItem label="Medications" detail="At cost · individualized" />
-              <BilledItem label="Lab work" detail="Individualized panels" />
-              <BilledItem label="Compounding" detail="When applicable" />
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* ===== WHY DIRECT-PAY — single column statement ===== */}
-      <section className="bg-paper border-t border-line/40">
-        <div className="container-velora py-10 sm:py-12 lg:py-16">
-          <div className="max-w-3xl mx-auto text-center">
-            <ChapterEyebrow number="02" label="Why Direct-Pay" />
-            <h2
-              className="mt-7 font-display text-ink leading-[1.04] tracking-[-0.018em]"
-              style={{ fontSize: 'clamp(1.625rem, 3.4vw, 2.375rem)' }}
-            >
-              The plan we recommend
-              <br />
-              <em className="italic font-display text-brown">is the plan you receive.</em>
-            </h2>
-            <div className="mt-7 mx-auto w-10 h-px bg-gold/80" />
-            <p className="mt-7 text-[15px] text-ink-soft leading-[1.85]">
-              Direct-pay means your physician&rsquo;s time and clinical judgment are not constrained
-              by insurance approvals, coverage limits, or coding requirements. You pay only
-              for the care you receive &mdash; no membership fees, no prior authorizations,
-              no surprise billing. The result is a longer visit, a better plan, and the
-              same physician at every appointment.
-            </p>
+            {/* RIGHT — Also Billed Separately (transparency strip) */}
+            <div className="bg-paper border border-line/60 rounded-2xl px-6 py-6 lg:px-7 lg:py-7">
+              <div className="flex items-center gap-3">
+                <ShieldCheck className="size-4 text-brown" strokeWidth={1.8} />
+                <p className="text-[10.5px] tracking-[0.32em] uppercase text-brown font-semibold">
+                  Also Billed Separately
+                </p>
+              </div>
+              <p className="mt-3 text-[13.5px] text-ink-soft leading-[1.65]">
+                Medications, compounding, and laboratory testing are itemized and billed at cost.
+                Your physician will review pricing with you before any treatment is started &mdash;
+                there are no surprise charges.
+              </p>
+              <div className="mt-5 grid grid-cols-3 gap-x-5 text-[12px] text-ink-soft">
+                <BilledItem label="Medications" detail="At cost · individualized" />
+                <BilledItem label="Lab work" detail="Individualized panels" />
+                <BilledItem label="Compounding" detail="When applicable" />
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
 
       {/* ===== PRICING FAQ — scoped to pricing only ===== */}
-      <section className="bg-bone border-t border-line/40">
-        <div className="container-velora py-10 sm:py-12 lg:py-16">
-          <div className="grid lg:grid-cols-[minmax(0,0.7fr)_minmax(0,1.3fr)] gap-12 lg:gap-20">
+      <section className="bg-paper border-t border-line/40">
+        <div className="container-velora py-10 lg:py-14">
+          <div className="grid lg:grid-cols-[minmax(0,0.7fr)_minmax(0,1.3fr)] gap-10 lg:gap-16">
             <div className="lg:sticky lg:top-24 lg:self-start">
               <ChapterEyebrow number="03" label="Pricing FAQ" />
               <h2
-                className="mt-7 font-display text-ink leading-[1.04] tracking-[-0.018em]"
-                style={{ fontSize: 'clamp(1.625rem, 3.2vw, 2.25rem)' }}
+                className="mt-5 font-display text-ink leading-[1.06] tracking-[-0.018em]"
+                style={{ fontSize: 'clamp(1.5rem, 2.8vw, 2rem)' }}
               >
                 Common questions
                 <br />
                 <em className="italic font-display text-brown">about pricing.</em>
               </h2>
-              <p className="mt-7 text-[13.5px] text-ink-soft leading-[1.75] max-w-[340px]">
+              <p className="mt-5 text-[13.5px] text-ink-soft leading-[1.65] max-w-[340px]">
                 Have a question that isn&rsquo;t here? Reach out &mdash; a physician will respond
                 directly.
               </p>
               <Link
                 href="/contact"
-                className="mt-6 inline-flex items-center gap-2 text-[10.5px] tracking-[0.28em] uppercase text-brown hover:text-brown-deep font-semibold border-b border-brown/40 hover:border-brown pb-1 transition-colors"
+                className="mt-5 inline-flex items-center gap-2 text-[10.5px] tracking-[0.28em] uppercase text-brown hover:text-brown-deep font-semibold border-b border-brown/40 hover:border-brown pb-1 transition-colors"
               >
                 Contact a physician
                 <ArrowRight className="size-3.5" />
               </Link>
 
-              <div className="mt-6 lg:mt-9 relative aspect-[4/5] lg:aspect-[3/4] rounded-xl overflow-hidden ring-1 ring-line/50 shadow-[0_24px_50px_-30px_rgba(74,52,28,0.45)]">
+              <div className="mt-6 relative aspect-[4/3] lg:aspect-[16/10] rounded-xl overflow-hidden ring-1 ring-line/50 shadow-[0_24px_50px_-30px_rgba(74,52,28,0.45)]">
                 <Image
                   src="/photos/faq-cta.png"
                   alt="Velora Medical Institute — Frequently Asked Questions"
