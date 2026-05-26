@@ -80,27 +80,25 @@ export function HomeHero() {
           <div className="max-w-[62%] sm:max-w-[58%] lg:max-w-[560px] w-full">
             {/* Eyebrow */}
             <div className="flex flex-wrap items-center gap-x-2 sm:gap-x-3 gap-y-1.5 text-[9px] sm:text-[10.5px] lg:text-[11px] tracking-[0.22em] sm:tracking-[0.26em] uppercase text-cream/90 font-semibold">
-              <span>Longevity</span>
+              <span>Physician-Led</span>
               <span className="size-[3px] rounded-full bg-gold" aria-hidden />
-              <span>Obesity</span>
-              <span className="size-[3px] rounded-full bg-gold" aria-hidden />
-              <span>Hormone</span>
+              <span>Evidence-Based</span>
             </div>
 
             {/* Headline */}
             <h1
-              className="mt-3 sm:mt-4 font-display leading-[1.05] tracking-[-0.02em]"
-              style={{ fontSize: 'clamp(1.25rem, 4.4vw, 2.625rem)' }}
+              className="mt-3 sm:mt-4 font-display leading-[1.06] tracking-[-0.02em]"
+              style={{ fontSize: 'clamp(1.25rem, 4.2vw, 2.5rem)' }}
             >
+              <span className="text-cream">Double Board-Certified</span>
+              <br />
               <span className="text-cream">Physician-Guided</span>
               <br />
-              <em className="not-italic font-display text-gold italic">Weight Loss &amp;</em>
+              <em className="not-italic font-display text-gold italic">
+                Weight Management, Hormone Therapy
+              </em>
               <br />
-              <span className="text-cream">Hormone Optimization</span>
-              <span className="hidden sm:inline">
-                <br />
-                <span className="text-cream">Longevity &amp; Preventive Medicine</span>
-              </span>
+              <em className="not-italic font-display text-gold italic">&amp; Longevity Medicine</em>
             </h1>
 
             <div className="mt-4 sm:mt-5 w-10 sm:w-16 h-px bg-gold" />
