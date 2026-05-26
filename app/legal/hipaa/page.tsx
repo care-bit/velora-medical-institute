@@ -35,7 +35,7 @@ export default function HipaaPage() {
           body: (
             <>
               <p>You have the right to inspect and copy your medical records, request an amendment, request a list of disclosures, request restrictions on certain uses, and request confidential communications.</p>
-              <p>To exercise any of these rights, please email care@veloramedical.com.</p>
+              <p>To exercise any of these rights, please email care@veloramedicine.com.</p>
             </>
           ),
         },

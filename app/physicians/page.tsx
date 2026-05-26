@@ -115,14 +115,13 @@ function PhysicianProfile({
     <article className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
       {/* Portrait */}
       <div className={`lg:col-span-5 ${reverse ? 'lg:order-2' : ''}`}>
-        <div className="aspect-[16/10] sm:aspect-[4/5] bg-paper border border-line relative overflow-hidden rounded-md">
+        <div className="aspect-[3/4] sm:aspect-[4/5] bg-paper border border-line relative overflow-hidden rounded-md">
           <Image
             src={photo}
             alt={name}
             fill
             sizes="(min-width: 1024px) 40vw, 100vw"
-            className="object-cover"
-            style={{ objectPosition: 'center 18%' }}
+            className="object-cover object-top"
           />
           <div className="absolute bottom-0 left-0 right-0 px-6 py-5 bg-gradient-to-t from-ink/80 to-transparent">
             <p className="text-[10.5px] tracking-[0.22em] uppercase text-cream/80">Velora Medical Institute</p>

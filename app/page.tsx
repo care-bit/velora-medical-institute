@@ -285,14 +285,13 @@ function PhysicianCard({
 }) {
   return (
     <div className="bg-paper rounded-2xl border border-line/60 p-5 lg:p-6 shadow-[0_28px_60px_-32px_rgba(74,52,28,0.35)] flex flex-col sm:flex-row gap-5 sm:gap-6">
-      <div className="relative w-full sm:w-40 lg:w-48 shrink-0 aspect-[3/4] rounded-xl overflow-hidden">
+      <div className="relative w-full sm:w-40 lg:w-48 shrink-0 aspect-[3/4] rounded-xl overflow-hidden bg-bone">
         <Image
           src={src}
           alt={name}
           fill
           sizes="(min-width: 1024px) 12rem, (min-width: 640px) 10rem, 100vw"
-          className="object-cover"
-          style={{ objectPosition: 'center 20%' }}
+          className="object-cover object-top"
         />
       </div>
       <div className="flex-1 min-w-0">

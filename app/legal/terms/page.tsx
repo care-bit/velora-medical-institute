@@ -50,7 +50,7 @@ export default function TermsPage() {
         {
           heading: 'Contact',
           body: (
-            <p>Questions about these terms can be directed to <a href="mailto:care@veloramedical.com" className="underline underline-offset-2">care@veloramedical.com</a>.</p>
+            <p>Questions about these terms can be directed to <a href="mailto:care@veloramedicine.com" className="underline underline-offset-2">care@veloramedicine.com</a>.</p>
           ),
         },
       ]}

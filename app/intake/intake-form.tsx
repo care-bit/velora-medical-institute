@@ -101,7 +101,7 @@ export function IntakeForm() {
       })
       window.scrollTo({ top: 0, behavior: 'smooth' })
     } catch {
-      toast.error('Submission failed', { description: 'Please try again or email care@veloramedical.com.' })
+      toast.error('Submission failed', { description: 'Please try again or email care@veloramedicine.com.' })
     } finally {
       setSubmitting(false)
     }
@@ -156,7 +156,7 @@ export function IntakeForm() {
           <div className="mt-8 p-5 bg-paper border border-line">
             <p className="eyebrow text-sage">Need Help?</p>
             <p className="mt-3 text-[13.5px] text-ink-soft leading-relaxed">
-              Email <a href="mailto:care@veloramedical.com" className="text-ink underline underline-offset-2">care@veloramedical.com</a> if you have questions while completing your intake.
+              Email <a href="mailto:care@veloramedicine.com" className="text-ink underline underline-offset-2">care@veloramedicine.com</a> if you have questions while completing your intake.
             </p>
           </div>
         </aside>

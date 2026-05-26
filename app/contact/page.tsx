@@ -55,7 +55,7 @@ export default function ContactPage() {
       setStatus('success')
     } catch {
       setStatus('error')
-      setErrorMsg('Could not send your message. Please try again or email care@veloramedical.com.')
+      setErrorMsg('Could not send your message. Please try again or email care@veloramedicine.com.')
     }
   }
 
@@ -87,7 +87,7 @@ export default function ContactPage() {
             {/* Two direct channels — composed, not stacked tiles */}
             <div className="mt-7 rounded-2xl bg-paper border border-line/60 px-5 sm:px-6 py-5 shadow-[0_24px_50px_-32px_rgba(74,52,28,0.3)]">
               <a
-                href="mailto:care@veloramedical.com"
+                href="mailto:care@veloramedicine.com"
                 className="group flex items-center gap-4 pb-4 border-b border-line/60 -mx-1 px-1 rounded-md hover:bg-bone/60 transition-colors"
               >
                 <span className="size-10 rounded-full bg-brown/10 text-brown flex items-center justify-center shrink-0">
@@ -98,7 +98,7 @@ export default function ContactPage() {
                     Email a physician
                   </p>
                   <p className="mt-1 font-display text-ink text-[15.5px] md:text-[16.5px] leading-[1.2] truncate">
-                    care@veloramedical.com
+                    care@veloramedicine.com
                   </p>
                 </div>
                 <ArrowRight

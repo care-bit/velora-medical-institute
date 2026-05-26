@@ -49,13 +49,13 @@ export default function PrivacyPage() {
         {
           heading: 'Your Choices',
           body: (
-            <p>You may request access, correction, or deletion of your personal information by emailing care@veloramedical.com. Certain medical records are retained for the duration required by applicable law.</p>
+            <p>You may request access, correction, or deletion of your personal information by emailing care@veloramedicine.com. Certain medical records are retained for the duration required by applicable law.</p>
           ),
         },
         {
           heading: 'Contact',
           body: (
-            <p>Questions about this policy can be directed to <a href="mailto:care@veloramedical.com" className="underline underline-offset-2">care@veloramedical.com</a>.</p>
+            <p>Questions about this policy can be directed to <a href="mailto:care@veloramedicine.com" className="underline underline-offset-2">care@veloramedicine.com</a>.</p>
           ),
         },
       ]}

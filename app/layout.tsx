@@ -19,7 +19,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://veloramedical.com'),
+  metadataBase: new URL('https://veloramedicine.com'),
   title: {
     default: 'Velora Medical Institute — Weight Management, Hormone Therapy & Longevity',
     template: '%s — Velora Medical Institute',

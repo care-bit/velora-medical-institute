@@ -82,14 +82,13 @@ export default function AboutPage() {
             {/* RIGHT — twin portraits, offset for editorial rhythm */}
             <div className="relative grid grid-cols-2 gap-4 lg:gap-6">
               <figure className="relative">
-                <div className="relative aspect-[16/10] sm:aspect-[3/4] rounded-2xl overflow-hidden shadow-[0_30px_60px_-26px_rgba(74,52,28,0.55)] ring-1 ring-line/40">
+                <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-[0_30px_60px_-26px_rgba(74,52,28,0.55)] ring-1 ring-line/40">
                   <Image
                     src="/dr-amini.png"
                     alt="Dr. Afshin Amini, Internal and Obesity Medicine"
                     fill
                     sizes="(min-width: 1024px) 28vw, 50vw"
-                    className="object-cover"
-                    style={{ objectPosition: 'center 32%' }}
+                    className="object-cover object-top"
                     priority
                   />
                 </div>
@@ -104,14 +103,13 @@ export default function AboutPage() {
                 </figcaption>
               </figure>
               <figure className="relative lg:translate-y-10">
-                <div className="relative aspect-[16/10] sm:aspect-[3/4] rounded-2xl overflow-hidden shadow-[0_30px_60px_-26px_rgba(74,52,28,0.55)] ring-1 ring-line/40">
+                <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-[0_30px_60px_-26px_rgba(74,52,28,0.55)] ring-1 ring-line/40">
                   <Image
                     src="/dr-tolebeyan.jpeg"
                     alt="Dr. Amirseena Tolebeyan, Internal and Obesity Medicine"
                     fill
                     sizes="(min-width: 1024px) 28vw, 50vw"
-                    className="object-cover"
-                    style={{ objectPosition: 'center 32%' }}
+                    className="object-cover object-top"
                     priority
                   />
                 </div>
@@ -446,14 +444,13 @@ function PhysicianCard({
 }) {
   return (
     <div className="bg-paper rounded-2xl border border-line/60 p-6 lg:p-7 shadow-[0_28px_60px_-32px_rgba(74,52,28,0.35)] flex flex-col">
-      <div className="relative aspect-[16/10] sm:aspect-[4/5] rounded-xl overflow-hidden">
+      <div className="relative aspect-[3/4] sm:aspect-[4/5] rounded-xl overflow-hidden">
         <Image
           src={src}
           alt={name}
           fill
           sizes="(min-width: 1024px) 40vw, 100vw"
-          className="object-cover"
-          style={{ objectPosition: 'center 25%' }}
+          className="object-cover object-top"
         />
       </div>
       <div className="mt-6">
