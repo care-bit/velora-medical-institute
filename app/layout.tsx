@@ -64,7 +64,10 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${fraunces.variable} ${inter.variable}`}>
-      <body className="min-h-screen bg-bone text-ink font-sans antialiased flex flex-col">
+      <body
+        suppressHydrationWarning
+        className="min-h-screen bg-bone text-ink font-sans antialiased flex flex-col"
+      >
         <SiteHeader />
         <main className="flex-1">{children}</main>
         <SiteFooter />
