@@ -4,6 +4,8 @@ import { useState } from 'react'
 import {
   ArrowRight,
   Mail,
+  Phone,
+  MapPin,
   Clock,
   Check,
   AlertCircle,
@@ -101,6 +103,52 @@ export default function ContactPage() {
                 </div>
                 <ArrowRight
                   className="size-4 text-brown/50 group-hover:text-brown group-hover:translate-x-0.5 transition-all shrink-0"
+                  strokeWidth={1.6}
+                />
+              </a>
+
+              <a
+                href="tel:+13142718668"
+                className="group flex items-center gap-4 py-4 border-b border-line/60 -mx-1 px-1 rounded-md hover:bg-bone/60 transition-colors"
+              >
+                <span className="size-10 rounded-full bg-brown/10 text-brown flex items-center justify-center shrink-0">
+                  <Phone className="size-4" strokeWidth={1.8} />
+                </span>
+                <div className="flex-1 min-w-0">
+                  <p className="text-[9.5px] tracking-[0.32em] uppercase text-ink-soft font-semibold">
+                    Call the practice
+                  </p>
+                  <p className="mt-1 font-display text-ink text-[15.5px] md:text-[16.5px] leading-[1.2]">
+                    (314) 271-8668
+                  </p>
+                </div>
+                <ArrowRight
+                  className="size-4 text-brown/50 group-hover:text-brown group-hover:translate-x-0.5 transition-all shrink-0"
+                  strokeWidth={1.6}
+                />
+              </a>
+
+              <a
+                href="https://maps.apple.com/?address=36+Four+Seasons+Shopping+Center+Ste+181,+Chesterfield,+MO+63017"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-start gap-4 py-4 border-b border-line/60 -mx-1 px-1 rounded-md hover:bg-bone/60 transition-colors"
+              >
+                <span className="size-10 rounded-full bg-brown/10 text-brown flex items-center justify-center shrink-0 mt-0.5">
+                  <MapPin className="size-4" strokeWidth={1.8} />
+                </span>
+                <div className="flex-1 min-w-0">
+                  <p className="text-[9.5px] tracking-[0.32em] uppercase text-ink-soft font-semibold">
+                    Address
+                  </p>
+                  <p className="mt-1 font-display text-ink text-[14.5px] md:text-[15.5px] leading-[1.35]">
+                    36 Four Seasons Shopping Center, Ste 181
+                    <br />
+                    Chesterfield, MO 63017
+                  </p>
+                </div>
+                <ArrowRight
+                  className="size-4 text-brown/50 group-hover:text-brown group-hover:translate-x-0.5 transition-all shrink-0 mt-0.5"
                   strokeWidth={1.6}
                 />
               </a>
