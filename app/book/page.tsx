@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     'Schedule a physician-guided initial consultation with Velora Medical Institute — telemedicine appointments via secure CharmHealth booking.',
 }
-
+ 
 export default function BookPage() {
   return (
     <section className="bg-bone">
