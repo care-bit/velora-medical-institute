@@ -41,13 +41,13 @@ const OPTIONS: ConsultOption[] = [
   },
   {
     key: 'combined',
-    title: 'Combined Metabolic & Hormone',
-    badge: 'Most Comprehensive',
-    description: 'Comprehensive evaluation addressing both weight management and hormone-related concerns within a single visit.',
+    title: 'longevity medicine ',
+    badge: 'preventive health',
+    description: 'comprehensive physician evaluation focus on prevention ,health optimization ,and long-term welness.',
     duration: '60 minutes · Telemedicine',
     price: '$295',
     icon: <Combine className="size-5" />,
-    bullets: ['Integrated metabolic + hormone assessment', 'Coordinated treatment planning', 'Single-visit evaluation'],
+    bullets: ['personalize longevity evaluation ', 'risk factor and life style assessment ', 'preventive health optimization '],
   },
 ]
 
