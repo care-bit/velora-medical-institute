@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowRight, ShieldCheck } from 'lucide-react'
-
+import BookingClient from './booking-client'
 export const metadata: Metadata = {
   title: 'Book Your Consultation',
   description:
@@ -39,19 +39,7 @@ export default function BookPage() {
           </div>
         </div>
 
-        {/* CharmHealth booking iframe */}
-        <div className="mt-7 lg:mt-12 mx-auto max-w-[980px]">
-          <div className="bg-cream rounded-2xl ring-1 ring-line/60 shadow-[0_36px_70px_-32px_rgba(74,52,28,0.4)] overflow-hidden">
-            <iframe
-              title="Velora Medical Institute — schedule a consultation"
-              width="100%"
-              height="1000"
-              src="https://ehr.charmtracker.com/publicCal.sas?method=getCal&digest=169f4dd01960b6c347cce5b694b4ef068939d9c126dfbd09067c87c887d291bb3ab0a83eb98867697b16a2ad35a972fba0ae868b6eb0918a"
-              style={{ overflow: 'hidden', border: 0, display: 'block' }}
-              frameBorder={0}
-            />
-          </div>
-        </div>
+        <BookingClient />
 
         {/* Trouble fallback */}
         <p className="mt-6 lg:mt-8 text-center text-[12px] text-ink-soft">
