@@ -46,7 +46,7 @@ export default function BookPage() {
               title="Velora Medical Institute — schedule a consultation"
               width="100%"
               height="1000"
-              src="https://ehr.charmtracker.com/publicCal.sas?method=getCal&digest=169f4dd01960b6c347cce5b694b4ef067276a41ed4094317f0ff07355529abc12fc9c2738e1cf54d7b16a2ad35a972fba0ae868b6eb0918a"
+              src="https://ehr.charmtracker.com/publicCal.sas?method=getCal&digest=169f4dd01960b6c347cce5b694b4ef068939d9c126dfbd09067c87c887d291bb3ab0a83eb98867697b16a2ad35a972fba0ae868b6eb0918a"
               style={{ overflow: 'hidden', border: 0, display: 'block' }}
               frameBorder={0}
             />
