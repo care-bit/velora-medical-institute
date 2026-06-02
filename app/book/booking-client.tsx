@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { ArrowUpRight, ArrowLeft, Check, Activity, FlaskConical, Combine, Calendar, Clock, ShieldCheck, CreditCard } from 'lucide-react'
 import { toast } from 'sonner'
 import { cn } from '@/lib/utils'
+import { trackEvent } from '@/lib/analytics'
 
 type Visit = 'weight' | 'hormone' | 'combined'
 
@@ -110,6 +111,7 @@ export function BookingClient() {
       })
       if (!res.ok) throw new Error('Booking submission failed')
       setDone(true)
+      trackEvent('book_consultation', { visit_type: type, is_program: isProgram })
       toast.success('Consultation request received', {
         description: 'You will receive an email shortly with payment instructions.',
       })

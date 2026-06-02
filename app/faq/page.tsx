@@ -2,9 +2,11 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 import { Calendar, ArrowRight } from 'lucide-react'
 import { FaqAccordion } from '@/components/site/faq-accordion'
+import { JsonLd } from '@/components/analytics/json-ld'
 
 export const metadata: Metadata = {
   title: 'Frequently Asked Questions',
+  alternates: { canonical: '/faq' },
   description:
     'Common questions about medical weight management, hormone therapy, longevity & preventive medicine, telemedicine visits, GLP-1 medications, BHRT, and Velora Medical Institute care.',
 }
@@ -42,9 +44,25 @@ const CATEGORIES = [
   { id: 'practice', label: 'Practice & Payment' },
 ] as const
 
+const allFaqItems = [...WEIGHT_FAQ, ...HORMONE_FAQ, ...PRACTICE_FAQ]
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: allFaqItems.map(({ q, a }) => ({
+    '@type': 'Question',
+    name: q,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: a,
+    },
+  })),
+}
+
 export default function FaqPage() {
   return (
     <>
+      <JsonLd data={faqSchema} />
       {/* ===== HERO — dark band, no photo (the photo has baked text) ===== */}
       <section className="relative bg-[#0B0907] text-cream overflow-hidden">
         {/* Subtle warm key light top-right for depth (no photo) */}

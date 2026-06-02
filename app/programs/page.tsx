@@ -11,6 +11,7 @@ import { FaqAccordion } from '@/components/site/faq-accordion'
 
 export const metadata: Metadata = {
   title: 'Pricing & Programs',
+  alternates: { canonical: '/programs' },
   description:
     'Direct-pay pricing for Velora Medical Institute. Transparent flat fees for physician-guided weight management, hormone optimization, and longevity programs. No insurance billing.',
 }

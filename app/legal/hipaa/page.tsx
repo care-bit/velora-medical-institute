@@ -3,6 +3,7 @@ import { LegalPage } from '@/components/site/legal-page'
 
 export const metadata: Metadata = {
   title: 'HIPAA Notice of Privacy Practices',
+  alternates: { canonical: '/legal/hipaa' },
   description: 'Velora Medical Institute Notice of Privacy Practices for Protected Health Information.',
 }
 

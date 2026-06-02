@@ -3,6 +3,7 @@ import { IntakeForm } from './intake-form'
 
 export const metadata: Metadata = {
   title: 'Patient Intake & Consent',
+  alternates: { canonical: '/intake' },
   description:
     'Complete your Velora Medical Institute patient intake — medical history, hormone-related symptoms, lifestyle, goals, and required consents.',
 }

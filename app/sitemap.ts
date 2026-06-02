@@ -1,13 +1,15 @@
 import type { MetadataRoute } from 'next'
 
-const BASE = 'https://veloramedical.com'
+const BASE = 'https://veloramedicalinstitute.com'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [
     '',
     '/weight-management',
     '/hormone-therapy',
+    '/longevity',
     '/programs',
+    '/individual-visits',
     '/physicians',
     '/about',
     '/faq',
@@ -23,6 +25,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${BASE}${path}`,
     lastModified: now,
     changeFrequency: path === '' ? 'weekly' : 'monthly',
-    priority: path === '' ? 1 : path.startsWith('/legal') ? 0.3 : 0.8,
+    priority: path === ''
+      ? 1
+      : path.startsWith('/legal')
+      ? 0.3
+      : ['/book', '/physicians', '/about'].includes(path)
+      ? 0.9
+      : 0.8,
   }))
 }

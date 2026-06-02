@@ -4,16 +4,60 @@ import type { Metadata } from 'next'
 import { ArrowUpRight, GraduationCap, Stethoscope, ShieldCheck } from 'lucide-react'
 import { PageHero } from '@/components/site/page-hero'
 import { Section } from '@/components/site/section'
+import { JsonLd } from '@/components/analytics/json-ld'
 
 export const metadata: Metadata = {
   title: 'Our Physicians',
+  alternates: { canonical: '/physicians' },
   description:
     'Meet the double board-certified physicians of Velora Medical Institute — Dr. Afshin Amini and Dr. Amirseena Tolebeyan, specializing in Internal Medicine and Obesity Medicine.',
 }
 
+const physiciansSchema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Physician',
+    name: 'Afshin Amini, MD',
+    image: 'https://veloramedicalinstitute.com/dr-amini.png',
+    description:
+      'Dr. Amini focuses on metabolic health, weight management, hormone therapy, and longevity & preventive medicine, providing individualized, physician-directed care.',
+    medicalSpecialty: ['ObesityMedicine', 'InternalMedicine'],
+    hasCredential: [
+      { '@type': 'EducationalOccupationalCredential', credentialCategory: 'Board Certified — Internal Medicine' },
+      { '@type': 'EducationalOccupationalCredential', credentialCategory: 'Board Certified — Obesity Medicine' },
+    ],
+    worksFor: {
+      '@type': 'MedicalClinic',
+      name: 'Velora Medical Institute',
+      url: 'https://veloramedicalinstitute.com',
+    },
+    url: 'https://veloramedicalinstitute.com/physicians',
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Physician',
+    name: 'Amirseena Tolebeyan, MD',
+    image: 'https://veloramedicalinstitute.com/dr-tolebeyan.jpeg',
+    description:
+      'Dr. Tolebeyan focuses on metabolic health, weight management, hormone therapy, and longevity & preventive medicine, delivering structured, evidence-based care.',
+    medicalSpecialty: ['ObesityMedicine', 'InternalMedicine'],
+    hasCredential: [
+      { '@type': 'EducationalOccupationalCredential', credentialCategory: 'Board Certified — Internal Medicine' },
+      { '@type': 'EducationalOccupationalCredential', credentialCategory: 'Board Certified — Obesity Medicine' },
+    ],
+    worksFor: {
+      '@type': 'MedicalClinic',
+      name: 'Velora Medical Institute',
+      url: 'https://veloramedicalinstitute.com',
+    },
+    url: 'https://veloramedicalinstitute.com/physicians',
+  },
+]
+
 export default function PhysiciansPage() {
   return (
     <>
+      <JsonLd data={physiciansSchema} />
       <PageHero
         eyebrow="Meet Our Physicians"
         title={<>Care directed by <em className="not-italic text-brown">double board-certified</em> physicians.</>}

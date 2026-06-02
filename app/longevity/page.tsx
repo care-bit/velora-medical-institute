@@ -14,16 +14,37 @@ import {
   Microscope,
 } from 'lucide-react'
 import { FaqAccordion } from '@/components/site/faq-accordion'
+import { JsonLd } from '@/components/analytics/json-ld'
 
 export const metadata: Metadata = {
   title: 'Longevity Medicine · Metabolic & Hormone Optimization',
+  alternates: { canonical: '/longevity' },
   description:
-    'Physician-guided longevity, metabolic, and hormone optimization. Individualized care directed by double board-certified physicians at Velora Medical Institute.',
+    'Physician-guided longevity, metabolic, and hormone optimization. Individualized care directed by double board-certified physicians at Velora Medical Institute. Serving Chesterfield, MO and the greater St. Louis area via telemedicine.',
+  openGraph: {
+    images: [{ url: '/hero-telehealth.png', width: 1200, height: 800, alt: 'Longevity Medicine — Velora Medical Institute' }],
+  },
+}
+
+const longevitySchema = {
+  '@context': 'https://schema.org',
+  '@type': 'MedicalWebPage',
+  name: 'Longevity & Preventive Medicine',
+  url: 'https://veloramedicalinstitute.com/longevity',
+  description: 'Physician-guided longevity, metabolic, and hormone optimization — individualized care directed by double board-certified physicians.',
+  medicalAudience: { '@type': 'MedicalAudience', audienceType: 'Patient' },
+  about: [
+    { '@type': 'MedicalTherapy', name: 'Longevity Medicine' },
+    { '@type': 'MedicalTherapy', name: 'Preventive Medicine' },
+    { '@type': 'MedicalCondition', name: 'Metabolic Syndrome' },
+  ],
+  specialty: 'InternalMedicine',
 }
 
 export default function LongevityPage() {
   return (
     <>
+      <JsonLd data={longevitySchema} />
       {/* ===== HERO — split: editorial copy left, framework photo right ===== */}
       <section className="relative bg-bone overflow-hidden">
         <div className="container-velora pt-12 lg:pt-16 pb-10 sm:pb-14 lg:pb-20">

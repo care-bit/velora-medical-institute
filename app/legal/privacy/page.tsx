@@ -3,6 +3,7 @@ import { LegalPage } from '@/components/site/legal-page'
 
 export const metadata: Metadata = {
   title: 'Privacy Policy',
+  alternates: { canonical: '/legal/privacy' },
   description: 'How Velora Medical Institute collects, uses, and safeguards your information.',
 }
 

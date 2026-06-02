@@ -3,6 +3,7 @@ import { LegalPage } from '@/components/site/legal-page'
 
 export const metadata: Metadata = {
   title: 'Terms of Service',
+  alternates: { canonical: '/legal/terms' },
   description: 'Velora Medical Institute Terms of Service, including financial, telemedicine, and cancellation policies.',
 }
 

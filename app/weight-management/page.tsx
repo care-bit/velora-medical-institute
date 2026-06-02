@@ -14,16 +14,38 @@ import {
   Microscope,
 } from 'lucide-react'
 import { FaqAccordion } from '@/components/site/faq-accordion'
+import { JsonLd } from '@/components/analytics/json-ld'
 
 export const metadata: Metadata = {
   title: 'Medical Weight Management · GLP-1 Therapy & Metabolic Optimization',
+  alternates: { canonical: '/weight-management' },
   description:
-    'Physician-guided medical weight management with GLP-1 therapy, metabolic optimization, and long-term continuity. Directed by double board-certified physicians at Velora Medical Institute.',
+    'Physician-guided medical weight management with GLP-1 therapy, metabolic optimization, and long-term continuity. Directed by double board-certified physicians at Velora Medical Institute. Serving Chesterfield, MO and the greater St. Louis area via telemedicine.',
+  openGraph: {
+    images: [{ url: '/weight-loss-product.png', width: 1200, height: 800, alt: 'Medical Weight Management — Velora Medical Institute' }],
+  },
+}
+
+const weightSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'MedicalWebPage',
+  name: 'Medical Weight Management',
+  url: 'https://veloramedicalinstitute.com/weight-management',
+  description: 'Physician-guided medical weight management with GLP-1 therapy and metabolic optimization.',
+  medicalAudience: { '@type': 'MedicalAudience', audienceType: 'Patient' },
+  about: [
+    { '@type': 'MedicalTherapy', name: 'GLP-1 Receptor Agonist Therapy' },
+    { '@type': 'MedicalTherapy', name: 'Semaglutide' },
+    { '@type': 'MedicalTherapy', name: 'Tirzepatide' },
+    { '@type': 'MedicalCondition', name: 'Obesity' },
+  ],
+  specialty: 'ObesityMedicine',
 }
 
 export default function WeightManagementPage() {
   return (
     <>
+      <JsonLd data={weightSchema} />
       {/* ===== HERO — split: editorial copy left, GLP-1 program photo right ===== */}
       <section className="relative bg-bone overflow-hidden">
         <div className="container-velora pt-12 lg:pt-16 pb-10 sm:pb-14 lg:pb-20">

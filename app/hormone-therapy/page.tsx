@@ -14,16 +14,38 @@ import {
   Microscope,
 } from 'lucide-react'
 import { FaqAccordion } from '@/components/site/faq-accordion'
+import { JsonLd } from '@/components/analytics/json-ld'
 
 export const metadata: Metadata = {
   title: 'Hormone Optimization · Bioidentical Therapy for Men & Women',
+  alternates: { canonical: '/hormone-therapy' },
   description:
-    'Personalized bioidentical hormone therapy guided by lab work and physician oversight. Directed by double board-certified physicians at Velora Medical Institute.',
+    'Personalized bioidentical hormone therapy guided by lab work and physician oversight. Directed by double board-certified physicians at Velora Medical Institute. Serving Chesterfield, MO and the greater St. Louis area via telemedicine.',
+  openGraph: {
+    images: [{ url: '/hormone-therapy-product.png', width: 1200, height: 800, alt: 'Hormone Therapy — Velora Medical Institute' }],
+  },
+}
+
+const hormoneSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'MedicalWebPage',
+  name: 'Bioidentical Hormone Therapy',
+  url: 'https://veloramedicalinstitute.com/hormone-therapy',
+  description: 'Personalized bioidentical hormone therapy for men and women guided by lab work and physician oversight.',
+  medicalAudience: { '@type': 'MedicalAudience', audienceType: 'Patient' },
+  about: [
+    { '@type': 'MedicalTherapy', name: 'Bioidentical Hormone Replacement Therapy' },
+    { '@type': 'MedicalTherapy', name: 'Testosterone Therapy' },
+    { '@type': 'MedicalCondition', name: 'Menopause' },
+    { '@type': 'MedicalCondition', name: 'Andropause' },
+  ],
+  specialty: 'InternalMedicine',
 }
 
 export default function HormoneTherapyPage() {
   return (
     <>
+      <JsonLd data={hormoneSchema} />
       {/* ===== HERO — split: editorial copy left, product photo right ===== */}
       <section className="relative bg-bone overflow-hidden">
         <div className="container-velora pt-12 lg:pt-16 pb-10 sm:pb-14 lg:pb-20">

@@ -15,6 +15,7 @@ import { FaqAccordion } from '@/components/site/faq-accordion'
 
 export const metadata: Metadata = {
   title: 'About Velora Medical Institute',
+  alternates: { canonical: '/about' },
   description:
     'Velora Medical Institute — a physician-directed, direct-pay telemedicine practice led by two double board-certified physicians in Internal and Obesity Medicine.',
 }

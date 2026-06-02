@@ -14,6 +14,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'Individual Follow-Up Visits',
+  alternates: { canonical: '/individual-visits' },
   description:
     'On-demand 30-minute follow-up visits with your physician — $195. Adjust your plan, review labs, and stay on track between programs.',
 }

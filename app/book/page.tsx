@@ -4,6 +4,7 @@ import { ArrowRight, ShieldCheck } from 'lucide-react'
 import BookingClient from './booking-client'
 export const metadata: Metadata = {
   title: 'Book Your Consultation',
+  alternates: { canonical: '/book' },
   description:
     'Schedule a physician-guided initial consultation with Velora Medical Institute — telemedicine appointments via secure CharmHealth booking.',
 }

@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { ArrowUpRight, Check } from 'lucide-react'
 import { toast } from 'sonner'
 import { cn } from '@/lib/utils'
+import { trackEvent } from '@/lib/analytics'
 
 const MEDICAL_HISTORY = [
   'Hypertension','Diabetes / Prediabetes','Thyroid Disorder','Cardiovascular Disease',
@@ -96,6 +97,7 @@ export function IntakeForm() {
       })
       if (!res.ok) throw new Error()
       setDone(true)
+      trackEvent('intake_form_submit')
       toast.success('Intake submitted', {
         description: 'Your physician will review your information before your visit.',
       })

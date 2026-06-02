@@ -10,6 +10,7 @@ import {
   Check,
   AlertCircle,
 } from 'lucide-react'
+import { trackEvent } from '@/lib/analytics'
 
 const SUBJECTS = [
   'General Question',
@@ -53,6 +54,7 @@ export default function ContactPage() {
       })
       if (!res.ok) throw new Error('Request failed')
       setStatus('success')
+      trackEvent('contact_form_submit', { topic: payload.topic })
     } catch {
       setStatus('error')
       setErrorMsg('Could not send your message. Please try again or email care@veloramedicine.com.')

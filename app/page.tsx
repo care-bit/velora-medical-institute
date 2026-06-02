@@ -1,7 +1,15 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Calendar, ArrowRight } from 'lucide-react'
 import { HomeHero } from '@/components/site/home-hero'
+
+export const metadata: Metadata = {
+  alternates: { canonical: '/' },
+  openGraph: {
+    url: 'https://veloramedicalinstitute.com',
+  },
+}
 
 export default function HomePage() {
   return (
