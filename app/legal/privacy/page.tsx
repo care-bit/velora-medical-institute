@@ -50,7 +50,7 @@ export default function PrivacyPage() {
         {
           heading: 'Your Choices',
           body: (
-            <p>You may request access, correction, or deletion of your personal information by emailing care@veloramedicine.com. Certain medical records are retained for the duration required by applicable law.</p>
+            <p>You may request access, correction, or deletion of your personal information by emailing care@veloramedicalinstitute.com. Certain medical records are retained for the duration required by applicable law.</p>
           ),
         },
         {
