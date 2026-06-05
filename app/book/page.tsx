@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowRight, ShieldCheck } from 'lucide-react'
-import BookingClient from './booking-client'
+import { BookingClient } from './booking-client'
 export const metadata: Metadata = {
   title: 'Book Your Consultation',
   alternates: { canonical: '/book' },
