@@ -89,7 +89,7 @@ export default function ContactPage() {
             {/* Two direct channels — composed, not stacked tiles */}
             <div className="mt-7 rounded-2xl bg-paper border border-line/60 px-5 sm:px-6 py-5 shadow-[0_24px_50px_-32px_rgba(74,52,28,0.3)]">
               <a
-                href="mailto:care@veloramedicine.com"
+                href="mailto:care@veloramedicalinstitute.com"
                 className="group flex items-center gap-4 pb-4 border-b border-line/60 -mx-1 px-1 rounded-md hover:bg-bone/60 transition-colors"
               >
                 <span className="size-10 rounded-full bg-brown/10 text-brown flex items-center justify-center shrink-0">
