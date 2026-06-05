@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { Suspense } from 'react'
 import { ArrowRight, ShieldCheck } from 'lucide-react'
 import { BookingClient } from './booking-client'
 export const metadata: Metadata = {
@@ -40,7 +41,9 @@ export default function BookPage() {
           </div>
         </div>
 
-        <BookingClient />
+        <Suspense fallback={null}>
+  <BookingClient />
+</Suspense>
 
         {/* Trouble fallback */}
         <p className="mt-6 lg:mt-8 text-center text-[12px] text-ink-soft">
