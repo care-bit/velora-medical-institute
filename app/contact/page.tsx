@@ -57,7 +57,7 @@ export default function ContactPage() {
       trackEvent('contact_form_submit', { topic: payload.topic })
     } catch {
       setStatus('error')
-      setErrorMsg('Could not send your message. Please try again or email care@veloramedicine.com.')
+      setErrorMsg('Could not send your message. Please try again or email care@veloramedicalinstitute.com.')
     }
   }
 
