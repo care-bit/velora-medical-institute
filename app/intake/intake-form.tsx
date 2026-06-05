@@ -103,7 +103,7 @@ export function IntakeForm() {
       })
       window.scrollTo({ top: 0, behavior: 'smooth' })
     } catch {
-      toast.error('Submission failed', { description: 'Please try again or email care@veloramedicine.com.' })
+      toast.error('Submission failed', { description: 'Please try again or email care@veloramedicalinstitute.com.' })
     } finally {
       setSubmitting(false)
     }
