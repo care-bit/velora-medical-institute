@@ -98,7 +98,7 @@ const medicalClinicSchema = {
     'Physician-directed, direct-pay telemedicine practice specializing in medical weight management, bioidentical hormone therapy, and longevity & preventive medicine.',
   url: SITE_URL,
   telephone: '+13142718668',
-  email: 'care@veloramedicine.com',
+  email: 'care@veloramedicalinstitute.com',
   address: {
     '@type': 'PostalAddress',
     streetAddress: '36 Four Seasons Shopping Center Ste 181',
