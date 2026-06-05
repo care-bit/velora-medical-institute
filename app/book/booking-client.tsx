@@ -117,7 +117,7 @@ export function BookingClient() {
       })
     } catch {
       toast.error('Something went wrong', {
-        description: 'Please try again or contact care@veloramedicine.com.',
+        description: 'Please try again or contact care@veloramedicalinstitute.com.',
       })
     } finally {
       setSubmitting(false)
