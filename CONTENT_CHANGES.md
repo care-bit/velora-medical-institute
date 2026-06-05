@@ -177,7 +177,7 @@ Every flag added in this pass, in one place:
 ### Pre-existing operational facts that this pass did NOT verify (worth user confirmation)
 These are existing copy left untouched but should be sanity-checked:
 - Phone number `(833) 583-5672` (footer + contact page + contact-form confirmation)
-- Email `care@veloramedical.com` (multiple files)
+- Email `care@veloramedicalinstitute.com` (multiple files)
 - Hours `Mon–Fri · 8am–6pm Central` (contact page)
 - Cancellation fees: $95 (initial late), $75 (follow-up late/no-show), $400 (Weight program early termination), $250 (Hormone program early termination) — appear in `app/legal/terms/page.tsx` and `app/intake/intake-form.tsx`
 - Pricing: $295 / $195 / $145 / $180 — assumed correct per brief
