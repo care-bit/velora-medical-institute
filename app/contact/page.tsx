@@ -100,7 +100,7 @@ export default function ContactPage() {
                     Email a physician
                   </p>
                   <p className="mt-1 font-display text-ink text-[15.5px] md:text-[16.5px] leading-[1.2] truncate">
-                    care@veloramedicine.com
+                    care@veloramedicalinstitute.com
                   </p>
                 </div>
                 <ArrowRight
