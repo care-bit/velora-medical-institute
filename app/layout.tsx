@@ -25,7 +25,7 @@ const SITE_URL = 'https://veloramedicalinstitute.com'
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   verification: {
-    google: 'hvePVkuf-LUGeW047VH88XHuXOizZyK6QmMS1jhwcTA',
+    google: 'hvePVkuf-LUGeW047VH88XHuXOizzyK6QmMS1jhwcTA',
   },
   title: {
     default: 'Velora Medical Institute — Weight Management, Hormone Therapy & Longevity',
