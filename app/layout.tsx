@@ -56,9 +56,6 @@ alternates: {
     'direct pay medical practice',
     'concierge medicine St Louis',
   ],
-  alternates: {
-    canonical: '/',
-  },
   openGraph: {
     type: 'website',
     url: SITE_URL,
