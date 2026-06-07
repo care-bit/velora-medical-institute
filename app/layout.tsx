@@ -27,6 +27,9 @@ export const metadata: Metadata = {
   verification: {
     google: 'hvePVkuf-LUGeW047VH88XHuXOizzyK6QmMS1jhwcTA',
   },
+alternates: {
+  canonical: '/',
+},
   title: {
     default: 'Velora Medical Institute — Weight Management, Hormone Therapy & Longevity',
     template: '%s — Velora Medical Institute',
