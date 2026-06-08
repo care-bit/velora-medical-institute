@@ -80,9 +80,10 @@ alternates: {
     images: ['/velora-logo-full.png'],
   },
   icons: {
-    icon: '/velora-leaf-icon.png',
-    apple: '/apple-icon.png',
-  },
+  icon: '/velora-logo.png',
+  shortcut: '/velora-logo.png',
+  apple: '/velora-logo.png',
+},
   robots: { index: true, follow: true },
 }
 
