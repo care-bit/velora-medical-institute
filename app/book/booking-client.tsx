@@ -365,10 +365,13 @@ window.location.href =
                       <ArrowLeft className="size-3.5" />
                       Back
                     </button>
-                    <button type="submit" disabled={!canSubmit || submitting} className="btn-primary">
-                      {submitting ? 'Submitting…' : 'Submit Request'}
-                      <ArrowUpRight className="size-3.5" />
-                    </button>
+                    <a
+  href="PASTE_YOUR_CHARMHEALTH_BOOKING_LINK_HERE"
+  className="btn-primary"
+>
+  Continue to Secure Scheduling
+  <ArrowUpRight className="size-3.5" />
+</a>
                   </div>
                 </form>
               </StepCard>
