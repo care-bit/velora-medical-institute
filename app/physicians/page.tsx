@@ -62,7 +62,7 @@ export default function PhysiciansPage() {
         eyebrow="Meet Our Physicians"
         title={<>Care directed by <em className="not-italic text-brown">double board-certified</em> physicians.</>}
         subtitle="Internal Medicine and Obesity Medicine — focused on metabolic health, weight management, hormone therapy, and longevity & preventive medicine. Each treatment plan is grounded in clinical assessment, evidence-based therapy, and continuous monitoring."
-        primary={{ href: '/book', label: 'Book Initial Consultation' }}
+        primary={{ href="https://ehr.charmtracker.com/publicCal.sas?method=getCal&digest=169f4dd01960b6c347cce5b694b4ef068939d9c126dfbd091753f82206e0aa9e4b5cb98c3566431f7b16a2ad35a972fba0ae868b6eb0918a" ,label: 'Book Initial Consultation' }}
       />
 
       <Section bg="bone">
