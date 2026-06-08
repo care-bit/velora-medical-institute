@@ -1,45 +1,64 @@
 import { NextResponse } from 'next/server'
+import { Resend } from 'resend'
 
 export const runtime = 'nodejs'
 
-interface BookingPayload {
-  type: 'weight' | 'hormone' | 'combined'
-  isProgram: boolean
-  date: string
-  time: string
-  contact: {
-    firstName: string
-    lastName: string
-    email: string
-    phone: string
-    state: string
-    notes?: string
-    agree: boolean
-  }
-  submittedAt: string
-}
+const resend = new Resend(process.env.RESEND_API_KEY)
 
 export async function POST(req: Request) {
-  let payload: BookingPayload
   try {
-    payload = await req.json()
-  } catch {
-    return NextResponse.json({ error: 'Invalid JSON' }, { status: 400 })
+    const payload = await req.json()
+
+    const { type, isProgram, date, time, contact } = payload
+
+    if (
+      !contact?.firstName ||
+      !contact?.email ||
+      !contact?.state ||
+      !type ||
+      !date ||
+      !time ||
+      !contact?.agree
+    ) {
+      return NextResponse.json(
+        { error: 'Missing required fields' },
+        { status: 400 }
+      )
+    }
+
+    await resend.emails.send({
+      from: 'Velora Medical Institute <onboarding@resend.dev>',
+      to: 'care@veloramedicalinstitute.com',
+      subject: 'New Velora Booking Request',
+      html: `
+        <h2>New Booking Request</h2>
+
+        <p><b>Service:</b> ${type}</p>
+        <p><b>Program:</b> ${isProgram}</p>
+
+        <p><b>Date:</b> ${date}</p>
+        <p><b>Time:</b> ${time}</p>
+
+        <hr/>
+
+        <p><b>Name:</b> ${contact.firstName} ${contact.lastName || ''}</p>
+        <p><b>Email:</b> ${contact.email}</p>
+        <p><b>Phone:</b> ${contact.phone || ''}</p>
+        <p><b>State:</b> ${contact.state}</p>
+
+        <p><b>Notes:</b><br/>
+        ${contact.notes || ''}</p>
+      `
+    })
+
+    return NextResponse.json({ ok: true })
+
+  } catch (error) {
+    console.error(error)
+
+    return NextResponse.json(
+      { error: 'Email failed' },
+      { status: 500 }
+    )
   }
-
-  const { contact, type, date, time } = payload
-  if (!contact?.firstName || !contact?.email || !contact?.state || !type || !date || !time || !contact.agree) {
-    return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
-  }
-
-  console.log('[velora] booking request', {
-    type,
-    isProgram: payload.isProgram,
-    date,
-    time,
-    contact: { name: `${contact.firstName} ${contact.lastName}`, email: contact.email, state: contact.state },
-    submittedAt: payload.submittedAt,
-  })
-
-  return NextResponse.json({ ok: true, requestId: `req_${Date.now().toString(36)}` })
 }
