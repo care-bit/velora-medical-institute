@@ -113,7 +113,7 @@ export function HomeHero() {
             {/* CTAs */}
             <div className="mt-4 sm:mt-6 lg:mt-7 flex flex-col sm:flex-row gap-2 sm:gap-3 lg:gap-4">
               <Link
-                href="/book"
+                href="https://ehr.charmtracker.com/publicCal.sas?method=getCal&digest=169f4dd01960b6c347cce5b694b4ef068939d9c126dfbd091753f82206e0aa9e4b5cb98c3566431f7b16a2ad35a972fba0ae868b6eb0918a"
                 className="inline-flex items-center justify-center gap-1.5 sm:gap-2.5 bg-gold text-ink hover:bg-gold/90 px-3.5 sm:px-7 py-2.5 sm:py-4 rounded-md text-[10px] sm:text-[11.5px] tracking-[0.16em] sm:tracking-[0.2em] uppercase font-semibold transition-colors"
               >
                 <Calendar className="size-3.5 sm:size-4" strokeWidth={2} />
