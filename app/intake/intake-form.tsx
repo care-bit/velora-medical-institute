@@ -128,7 +128,7 @@ export function IntakeForm() {
             our care team will contact you directly.
           </p>
           <div className="mt-12 flex flex-wrap items-center justify-center gap-3">
-            <Link href="/book" className="btn-primary">Book a Consultation <ArrowUpRight className="size-3.5" /></Link>
+            <Link href="https://ehr.charmtracker.com/publicCal.sas?method=getCal&digest=169f4dd01960b6c347cce5b694b4ef068939d9c126dfbd091753f82206e0aa9e4b5cb98c3566431f7b16a2ad35a972fba0ae868b6eb0918a" className="btn-primary">Book a Consultation <ArrowUpRight className="size-3.5" /></Link>
             <Link href="/" className="btn-secondary">Return Home</Link>
           </div>
         </div>
