@@ -37,7 +37,7 @@ const physiciansSchema = [
     '@context': 'https://schema.org',
     '@type': 'Physician',
     name: 'Amirseena Tolebeyan, MD',
-    image: 'https://veloramedicalinstitute.com/dr-tolebeyan.jpeg',
+    // image: 'https://veloramedicalinstitute.com/dr-tolebeyan.jpeg',
     description:
       'Dr. Tolebeyan focuses on metabolic health, weight management, hormone therapy, and longevity & preventive medicine, delivering structured, evidence-based care.',
     medicalSpecialty: ['ObesityMedicine', 'InternalMedicine'],
