@@ -130,7 +130,7 @@ export default function PhysiciansPage() {
             Schedule your <em className="not-italic text-gold">initial consultation</em>.
           </h2>
           <div className="mt-7 lg:mt-10 flex flex-wrap items-center justify-center gap-3">
-            <Link href="/book" className="inline-flex items-center justify-center gap-2 bg-cream text-brown hover:bg-paper px-6 py-3.5 rounded-md text-[11px] tracking-[0.24em] uppercase font-semibold transition-colors">
+            <Link href="https://ehr.charmtracker.com/publicCal.sas?method=getCal&digest=169f4dd01960b6c347cce5b694b4ef068939d9c126dfbd091753f82206e0aa9e4b5cb98c3566431f7b16a2ad35a972fba0ae868b6eb0918a" className="inline-flex items-center justify-center gap-2 bg-cream text-brown hover:bg-paper px-6 py-3.5 rounded-md text-[11px] tracking-[0.24em] uppercase font-semibold transition-colors">
               Book Consultation
               <ArrowUpRight className="size-3.5" />
             </Link>
