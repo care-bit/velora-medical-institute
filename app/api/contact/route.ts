@@ -1,35 +1,43 @@
 import { NextResponse } from 'next/server'
+import { Resend } from 'resend'
 
 export const runtime = 'nodejs'
 
-interface ContactPayload {
-  name: string
-  email: string
-  phone?: string
-  topic: string
-  message: string
-  submittedAt: string
-}
+const resend = new Resend(process.env.RESEND_API_KEY)
 
 export async function POST(req: Request) {
-  let payload: ContactPayload
   try {
-    payload = await req.json()
-  } catch {
-    return NextResponse.json({ error: 'Invalid JSON' }, { status: 400 })
+    const payload = await req.json()
+
+    const { name, email, phone, message } = payload
+
+    if (!name || !email) {
+      return NextResponse.json(
+        { error: 'Missing required fields' },
+        { status: 400 }
+      )
+    }
+
+    await resend.emails.send({
+      from: 'Velora Medical Institute <onboarding@resend.dev>',
+      to: 'care@veloramedicalinstitute.com',
+      subject: 'New Velora Website Request',
+      html: `
+        <h2>New Website Request</h2>
+        <p><b>Name:</b> ${name}</p>
+        <p><b>Email:</b> ${email}</p>
+        <p><b>Phone:</b> ${phone}</p>
+        <p><b>Message:</b> ${message}</p>
+      `,
+    })
+
+    return NextResponse.json({ ok: true })
+  } catch (error) {
+    console.error(error)
+
+    return NextResponse.json(
+      { error: 'Email failed' },
+      { status: 500 }
+    )
   }
-
-  if (!payload.name || !payload.email || !payload.message) {
-    return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
-  }
-
-  // TODO: Wire up email/CRM delivery (e.g. Resend) once credentials are provided.
-  console.log('[velora] contact form submission', {
-    name: payload.name,
-    email: payload.email,
-    topic: payload.topic,
-    submittedAt: payload.submittedAt,
-  })
-
-  return NextResponse.json({ ok: true })
 }
