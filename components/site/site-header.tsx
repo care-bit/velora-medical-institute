@@ -204,7 +204,7 @@ export function SiteHeader() {
 
         <div className="flex items-center gap-3 shrink-0">
           <Link
-            href="/book"
+            href="https://ehr.charmtracker.com/publicCal.sas?method=getCal&digest=169f4dd01960b6c347cce5b694b4ef068939d9c126dfbd091753f82206e0aa9e4b5cb98c3566431f7b16a2ad35a972fba0ae868b6eb0918a"
             className={cn(
               'hidden md:inline-flex items-center gap-2 px-5 py-2.5 rounded-md text-[10.5px] tracking-[0.22em] uppercase font-semibold transition-colors',
               overHero
