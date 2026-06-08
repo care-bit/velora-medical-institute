@@ -78,7 +78,7 @@ export default function LongevityPage() {
 
               <div className="mt-9 flex flex-wrap gap-3">
                 <Link
-                  href="/book"
+                  href="https://ehr.charmtracker.com/publicCal.sas?method=getCal&digest=169f4dd01960b6c347cce5b694b4ef068939d9c126dfbd091753f82206e0aa9e4b5cb98c3566431f7b16a2ad35a972fba0ae868b6eb0918a"
                   className="inline-flex items-center gap-2.5 bg-brown text-cream hover:bg-brown-deep px-6 py-3.5 rounded-md text-[11px] tracking-[0.28em] uppercase font-semibold transition-colors"
                 >
                   <Calendar className="size-4" strokeWidth={2} />
@@ -320,7 +320,7 @@ export default function LongevityPage() {
               </ul>
 
               <Link
-                href="/book"
+                href="https://ehr.charmtracker.com/publicCal.sas?method=getCal&digest=169f4dd01960b6c347cce5b694b4ef068939d9c126dfbd091753f82206e0aa9e4b5cb98c3566431f7b16a2ad35a972fba0ae868b6eb0918a"
                 className="mt-8 inline-flex items-center justify-center gap-2.5 border border-brown text-brown hover:bg-brown hover:text-cream px-6 py-3.5 rounded-md text-[11px] tracking-[0.28em] uppercase font-semibold transition-colors"
               >
                 <Calendar className="size-4" strokeWidth={2} />
@@ -377,7 +377,7 @@ export default function LongevityPage() {
                 </div>
 
                 <Link
-                  href="/book"
+                  href="https://ehr.charmtracker.com/publicCal.sas?method=getCal&digest=169f4dd01960b6c347cce5b694b4ef068939d9c126dfbd091753f82206e0aa9e4b5cb98c3566431f7b16a2ad35a972fba0ae868b6eb0918a"
                   className="mt-8 inline-flex w-full items-center justify-center gap-2.5 bg-cream text-ink hover:bg-paper px-6 py-3.5 rounded-md text-[11px] tracking-[0.28em] uppercase font-semibold transition-colors"
                 >
                   Start Optimization Program
