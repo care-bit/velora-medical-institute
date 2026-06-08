@@ -279,7 +279,7 @@ export function SiteHeader() {
             </nav>
             <div className="p-6 border-t border-line">
               <Link
-                href="/book"
+                href="https://ehr.charmtracker.com/publicCal.sas?method=getCal&digest=169f4dd01960b6c347cce5b694b4ef068939d9c126dfbd091753f82206e0aa9e4b5cb98c3566431f7b16a2ad35a972fba0ae868b6eb0918a"
                 className="w-full inline-flex items-center justify-center gap-2.5 bg-brown text-cream hover:bg-brown-deep px-6 py-4 text-[13px] tracking-[0.26em] uppercase font-semibold rounded-md transition-colors"
               >
                 <Calendar className="size-5" />
