@@ -51,7 +51,7 @@ export default function IndividualVisitsPage() {
               </p>
               <div className="mt-7">
                 <Link
-                  href="/book?type=followup"
+                  href="https://ehr.charmtracker.com/publicCal.sas?method=getCal&digest=169f4dd01960b6c347cce5b694b4ef068939d9c126dfbd091753f82206e0aa9e4b5cb98c3566431f7b16a2ad35a972fba0ae868b6eb0918a"
                   className="inline-flex items-center gap-2 bg-brown text-cream hover:bg-brown-deep px-6 py-3.5 rounded-md text-[11px] tracking-[0.24em] uppercase font-semibold transition-colors"
                 >
                   <Calendar className="size-4" strokeWidth={2} />
@@ -159,7 +159,7 @@ export default function IndividualVisitsPage() {
             </div>
 
             <Link
-              href="/book?type=followup"
+              href="https://ehr.charmtracker.com/publicCal.sas?method=getCal&digest=169f4dd01960b6c347cce5b694b4ef068939d9c126dfbd091753f82206e0aa9e4b5cb98c3566431f7b16a2ad35a972fba0ae868b6eb0918a"
               className="mt-7 w-full inline-flex items-center justify-center gap-2 bg-brown text-cream hover:bg-brown-deep px-5 py-3.5 rounded-md text-[11px] tracking-[0.24em] uppercase font-semibold transition-colors"
             >
               <Calendar className="size-4" strokeWidth={2} />
