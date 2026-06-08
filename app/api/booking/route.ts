@@ -14,11 +14,11 @@ export async function POST(req: Request) {
     if (
       !contact?.firstName ||
       !contact?.email ||
-      !contact?.state ||
+    
       !type ||
       !date ||
       !time ||
-      !contact?.agree
+      
     ) {
       return NextResponse.json(
         { error: 'Missing required fields' },
