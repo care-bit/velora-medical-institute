@@ -12,19 +12,19 @@ export async function POST(req: Request) {
     const { type, isProgram, date, time, contact } = payload
 
     if (
-      !contact?.firstName ||
-      !contact?.email ||
-    
-      !type ||
-      !date ||
-      !time ||
-      
-    ) {
-      return NextResponse.json(
-        { error: 'Missing required fields' },
-        { status: 400 }
-      )
-    }
+  !contact?.firstName ||
+  !contact?.lastName ||
+  !contact?.email ||
+  !contact?.phone ||
+  !type ||
+  !date ||
+  !time
+) {
+  return NextResponse.json(
+    { error: 'Missing required fields' },
+    { status: 400 }
+  )
+}
 
     await resend.emails.send({
       from: 'Velora Medical Institute <onboarding@resend.dev>',
