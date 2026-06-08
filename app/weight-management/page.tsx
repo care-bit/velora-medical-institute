@@ -79,7 +79,7 @@ export default function WeightManagementPage() {
 
               <div className="mt-9 flex flex-wrap gap-3">
                 <Link
-                  href="/book?type=weight"
+                  href="https://ehr.charmtracker.com/publicCal.sas?method=getCal&digest=169f4dd01960b6c347cce5b694b4ef068939d9c126dfbd091753f82206e0aa9e4b5cb98c3566431f7b16a2ad35a972fba0ae868b6eb0918a"
                   className="inline-flex items-center gap-2.5 bg-brown text-cream hover:bg-brown-deep px-6 py-3.5 rounded-md text-[11px] tracking-[0.28em] uppercase font-semibold transition-colors"
                 >
                   <Calendar className="size-4" strokeWidth={2} />
@@ -319,7 +319,7 @@ export default function WeightManagementPage() {
               </ul>
 
               <Link
-                href="/book?type=weight"
+                href="https://ehr.charmtracker.com/publicCal.sas?method=getCal&digest=169f4dd01960b6c347cce5b694b4ef068939d9c126dfbd091753f82206e0aa9e4b5cb98c3566431f7b16a2ad35a972fba0ae868b6eb0918a"
                 className="mt-8 inline-flex items-center justify-center gap-2.5 border border-brown text-brown hover:bg-brown hover:text-cream px-6 py-3.5 rounded-md text-[11px] tracking-[0.28em] uppercase font-semibold transition-colors"
               >
                 <Calendar className="size-4" strokeWidth={2} />
@@ -376,7 +376,7 @@ export default function WeightManagementPage() {
                 </div>
 
                 <Link
-                  href="/book?type=weight"
+                  href="https://ehr.charmtracker.com/publicCal.sas?method=getCal&digest=169f4dd01960b6c347cce5b694b4ef068939d9c126dfbd091753f82206e0aa9e4b5cb98c3566431f7b16a2ad35a972fba0ae868b6eb0918a"
                   className="mt-8 inline-flex w-full items-center justify-center gap-2.5 bg-cream text-ink hover:bg-paper px-6 py-3.5 rounded-md text-[11px] tracking-[0.28em] uppercase font-semibold transition-colors"
                 >
                   Start Optimization Program
@@ -475,7 +475,7 @@ export default function WeightManagementPage() {
 
             <div className="mt-8 lg:mt-12 grid md:grid-cols-2 gap-5 md:gap-6">
               <Link
-                href="/book?type=weight"
+                href="https://ehr.charmtracker.com/publicCal.sas?method=getCal&digest=169f4dd01960b6c347cce5b694b4ef068939d9c126dfbd091753f82206e0aa9e4b5cb98c3566431f7b16a2ad35a972fba0ae868b6eb0918a"
                 className="group relative bg-cream rounded-2xl p-7 md:p-8 flex flex-col justify-between min-h-[200px] transition-all border border-line/70 hover:border-brown/60 shadow-[0_22px_45px_-25px_rgba(74,52,28,0.35)]"
               >
                 <div>
@@ -499,7 +499,7 @@ export default function WeightManagementPage() {
               </Link>
 
               <Link
-                href="/book?type=weight"
+                href="https://ehr.charmtracker.com/publicCal.sas?method=getCal&digest=169f4dd01960b6c347cce5b694b4ef068939d9c126dfbd091753f82206e0aa9e4b5cb98c3566431f7b16a2ad35a972fba0ae868b6eb0918a"
                 className="group relative bg-brown text-cream rounded-2xl p-7 md:p-8 flex flex-col justify-between min-h-[200px] transition-all hover:bg-brown-deep shadow-[0_28px_55px_-25px_rgba(74,52,28,0.55)] overflow-hidden"
               >
                 <div
