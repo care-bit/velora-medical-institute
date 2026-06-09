@@ -215,15 +215,13 @@ window.location.href = "https://ehr2.charmtracker.com/publicCal.sas?method=getCa
                     <ArrowLeft className="size-3.5" />
                     Back to home
                   </Link>
-                  <button
-                    type="button"
-                    disabled={!canAdvance1}
-                    onClick={() => setStep(2)}
-                    className="btn-primary"
-                  >
-                    Continue
-                    <ArrowUpRight className="size-3.5" />
-                  </button>
+                  <a
+  href="https://ehr.charmtracker.com/publicCal.sas?method=getCal&digest=169f4dd01960b6c30e5c85f70251526ad34fe6559c5e6a1dae32f7441a6307b33ab0a83eb98867697b16a2ad35a972fba0ae868b6eb0918a"
+  className="btn-primary"
+>
+  Continue to Secure Scheduling
+  <ArrowUpRight className="size-3.5" />
+</a>
                 </div>
               </StepCard>
             )}
