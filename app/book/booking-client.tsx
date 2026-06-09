@@ -113,7 +113,7 @@ export function BookingClient() {
     
       trackEvent('book_consultation', { visit_type: type })
 
-window.location.href = "https://ehr.charmtracker.com/publicCal.sas?method=getCal&digest=169f4dd01960b6c30e5c85f70251526ad34fe6559c5e6a1d92e4bf186ebc041f66e98fcf386c01417b16a2ad35a972fba0ae868b6eb0918a"
+window.location.href ="https://ehr.charmtracker.com/publicCal.sas?method=getCal&digest=169f4dd01960b6c30e5c85f70251526ad34fe6559c5e6a1de14b07b70a53abad6ee57013c1a537e67b16a2ad35a972fba0ae868b6eb0918a"
     } catch {
       toast.error('Something went wrong', {
         description: 'Please try again or contact care@veloramedicalinstitute.com',
@@ -365,7 +365,7 @@ window.location.href = "https://ehr.charmtracker.com/publicCal.sas?method=getCal
                       Back
                     </button>
                     <a
-  href="https://ehr.charmtracker.com/publicCal.sas?method=getCal&digest=169f4dd01960b6c30e5c85f70251526ad34fe6559c5e6a1d92e4bf186ebc041f66e98fcf386c01417b16a2ad35a972fba0ae868b6eb0918a"
+  href="https://ehr.charmtracker.com/publicCal.sas?method=getCal&digest=169f4dd01960b6c30e5c85f70251526ad34fe6559c5e6a1de14b07b70a53abad6ee57013c1a537e67b16a2ad35a972fba0ae868b6eb0918a"
   className="btn-primary"
 >
   Continue to Secure Scheduling
