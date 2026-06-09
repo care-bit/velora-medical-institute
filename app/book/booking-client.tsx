@@ -232,7 +232,7 @@ window.location.href = "https://ehr.charmtracker.com/publicCal.sas?method=getCal
               <StepCard
                 stepLabel="02 · Preferred Date & Time"
                 title="When would you like to meet?"
-                subtitle="Final scheduling is confirmed by our team — we will offer the closest available slot to your preference."
+                subtitle="Choose an available appointment time directly through our secure scheduling system."
               >
                 <div className="grid sm:grid-cols-2 gap-5">
                   <Field label="Preferred Date">
