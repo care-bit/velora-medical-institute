@@ -114,7 +114,7 @@ export function BookingClient() {
       trackEvent('book_consultation', { visit_type: type })
 
 window.location.href =
-"https://ehr.charmtracker.com/publicCal.sas?method=getCal&digest=169f4dd01960b6c30e5c85f70251526a2d46820e07b45255a4499ee935883dc55385f436ad42bc027b16a2ad35a972fba0ae868b6eb0918a"
+<iframe width="100%" height="1000" src="https://ehr.charmtracker.com/publicCal.sas?method=getCal&digest=169f4dd01960b6c30e5c85f70251526a2d46820e07b452552ed41448cebb1a074b5cb98c3566431f7b16a2ad35a972fba0ae868b6eb0918a" style="overflow:hidden;" frameborder="0"></iframe>
     } catch {
       toast.error('Something went wrong', {
         description: 'Please try again or contact care@veloramedicalinstitute.com',
