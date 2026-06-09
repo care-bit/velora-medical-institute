@@ -44,7 +44,7 @@ export function SiteFooter() {
             </p>
 
             <Link
-              href="https://ehr.charmtracker.com/publicCal.sas?method=getCal&digest=169f4dd01960b6c347cce5b694b4ef068939d9c126dfbd091753f82206e0aa9e4b5cb98c3566431f7b16a2ad35a972fba0ae868b6eb0918a"
+              href="https://ehr.charmtracker.com/publicCal.sas?method=getCal&digest=169f4dd01960b6c31cb1f577544c70e574ed96d3d580cebc1192a3b4b068b2f4c791341ca9a05ba47b16a2ad35a972fba0ae868b6eb0918a"
               className="mt-7 inline-flex items-center gap-2.5 bg-brown text-cream hover:bg-brown-deep px-5 py-3 rounded-md text-[10.5px] tracking-[0.26em] uppercase font-semibold transition-colors"
             >
               <Calendar className="size-3.5" strokeWidth={2} />
