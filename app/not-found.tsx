@@ -16,7 +16,7 @@ export default function NotFound() {
         <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
           <Link href="/weight-management" className="btn-primary px-7 py-4">Weight Management <ArrowUpRight className="size-3.5" /></Link>
           <Link href="/hormone-therapy" className="btn-secondary px-7 py-4">Hormone Therapy</Link>
-          <Link href="https://ehr.charmtracker.com/publicCal.sas?method=getCal&digest=169f4dd01960b6c347cce5b694b4ef068939d9c126dfbd091753f82206e0aa9e4b5cb98c3566431f7b16a2ad35a972fba0ae868b6eb0918a" className="btn-secondary px-7 py-4">Book a $295 Consult</Link>
+          <Link href="https://ehr.charmtracker.com/publicCal.sas?method=getCal&digest=169f4dd01960b6c31cb1f577544c70e574ed96d3d580cebc1192a3b4b068b2f4c791341ca9a05ba47b16a2ad35a972fba0ae868b6eb0918a" className="btn-secondary px-7 py-4">Book a $295 Consult</Link>
         </div>
       </div>
     </section>
