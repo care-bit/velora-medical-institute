@@ -78,7 +78,7 @@ export default function LongevityPage() {
 
               <div className="mt-9 flex flex-wrap gap-3">
                 <Link
-                  href="https://ehr.charmtracker.com/publicCal.sas?method=getCal&digest=169f4dd01960b6c31cb1f577544c70e574ed96d3d580cebc1192a3b4b068b2f4c791341ca9a05ba47b16a2ad35a972fba0ae868b6eb0918a"
+                  href="https://ehr.charmtracker.com/publicCal.sas?method=getCal&digest=169f4dd01960b6c31cb1f577544c70e574ed96d3d580cebc1192a3b4b068b2f4c791341ca9a05ba47b16a2ad35a972fba0ae868b6eb0918a" 
                   className="inline-flex items-center gap-2.5 bg-brown text-cream hover:bg-brown-deep px-6 py-3.5 rounded-md text-[11px] tracking-[0.28em] uppercase font-semibold transition-colors"
                 >
                   <Calendar className="size-4" strokeWidth={2} />
