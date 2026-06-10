@@ -128,7 +128,7 @@ export default function HomePage() {
               bio="Dr. Amini is a double board-certified physician with focused expertise in metabolic health, weight management, hormone optimization, and longevity & preventive medicine. His practice emphasizes thorough clinical assessment, evidence-based treatment, and continuous physician-guided refinement over time."
             />
             <PhysicianCard
-              src="/dr-amini.png"
+              src="/dr-tolebeyan.jpeg"
               name="Amirseena Tolebeyan, MD"
               credentials="Double Board-Certified · Internal Medicine · Obesity Medicine"
               bio="Dr. Tolebeyan is a double board-certified physician focused on metabolic and hormonal health. His care model is rooted in individualized treatment planning, clinical rigor, and long-term continuity — the qualities he believes patients deserve and rarely receive."
