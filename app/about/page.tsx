@@ -384,7 +384,8 @@ export default function AboutPage() {
               </Link>
 
               <Link
-                href="/programs"
+                href=<Link
+  href="https://ehr.charmtracker.com/publicCal.sas?method=getCal&digest=169f4dd01960b6c31cb1f577544c70e5090e96f587ab34a3d38c10f34489ebf94b5cb98c3566431f7b16a2ad35a972fba0ae868b6eb0918a"
                 className="group relative bg-cream rounded-2xl p-7 md:p-8 flex flex-col justify-between min-h-[200px] transition-all border border-line/70 hover:border-brown/60 shadow-[0_22px_45px_-25px_rgba(74,52,28,0.35)]"
               >
                 <div>
