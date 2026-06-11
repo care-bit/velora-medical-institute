@@ -326,10 +326,10 @@ export default function ContactPage() {
           background-repeat: no-repeat;
           padding-right: 2.25rem;
         }
-            `}</style>
+      `}</style>
     </section>
   )
-} 
+}
 
 function FormField({
   label,
