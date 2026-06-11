@@ -20,6 +20,8 @@ const legal = [
   { href: '/legal/privacy', label: 'Privacy' },
   { href: '/legal/hipaa', label: 'HIPAA' },
   { href: '/legal/terms', label: 'Terms' },
+  { href: 'https://www.instagram.com/veloramedicalinstitute', label: 'Instagram' },
+  { href: 'https://www.facebook.com/veloramedicalinstitute', label: 'Facebook' },
 ]
 
 export function SiteFooter() {
