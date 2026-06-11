@@ -58,7 +58,7 @@ export default function AboutPage() {
 
               <div className="mt-9 flex flex-wrap gap-3">
                 <Link
-                  href="https://ehr.charmtracker.com/publicCal.sas?method=getCal&digest=169f4dd01960b6c31cb1f577544c70e574ed96d3d580cebc1192a3b4b068b2f4c791341ca9a05ba47b16a2ad35a972fba0ae868b6eb0918a"
+                  href="https://ehr.charmtracker.com/publicCal.sas?method=getCal&digest=169f4dd01960b6c31cb1f577544c70e5090e96f587ab34a3eeb950f233eb73b02fc9c2738e1cf54d7b16a2ad35a972fba0ae868b6eb0918a"
                   className="inline-flex items-center gap-2.5 bg-brown text-cream hover:bg-brown-deep px-6 py-3.5 rounded-md text-[11px] tracking-[0.28em] uppercase font-semibold transition-colors"
                 >
                   <Calendar className="size-4" strokeWidth={2} />
@@ -352,7 +352,7 @@ export default function AboutPage() {
 
             <div className="mt-8 lg:mt-12 grid md:grid-cols-2 gap-5 md:gap-6">
               <Link
-                href="https://ehr.charmtracker.com/publicCal.sas?method=getCal&digest=169f4dd01960b6c347cce5b694b4ef068939d9c126dfbd091753f82206e0aa9e4b5cb98c3566431f7b16a2ad35a972fba0ae868b6eb0918a"
+                href="https://ehr.charmtracker.com/publicCal.sas?method=getCal&digest=169f4dd01960b6c31cb1f577544c70e5090e96f587ab34a3eeb950f233eb73b02fc9c2738e1cf54d7b16a2ad35a972fba0ae868b6eb0918a"
                 className="group relative bg-brown text-cream rounded-2xl p-7 md:p-8 flex flex-col justify-between min-h-[200px] transition-all hover:bg-brown-deep shadow-[0_28px_55px_-25px_rgba(74,52,28,0.55)] overflow-hidden"
               >
                 <div
