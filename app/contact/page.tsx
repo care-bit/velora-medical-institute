@@ -327,7 +327,7 @@ export default function ContactPage() {
           padding-right: 2.25rem;
         }
             `}</style>
-    </>
+    </section>
   )
 } 
 
