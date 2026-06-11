@@ -173,7 +173,17 @@ export default function ContactPage() {
               </div>
             </div>
           </div>
-
+<div className="mt-8">
+  <p className="font-display text-lg">Follow us</p>
+  <div className="mt-3 flex gap-5">
+    <a href="https://www.instagram.com/veloramedicalinstitute" target="_blank">
+      Instagram
+    </a>
+    <a href="https://www.facebook.com/veloramedicalinstitute" target="_blank">
+      Facebook
+    </a>
+  </div>
+</div>
           {/* RIGHT — form */}
           <div className="bg-cream rounded-2xl border border-line/60 p-6 sm:p-7 lg:p-9 shadow-[0_28px_60px_-30px_rgba(74,52,28,0.4)]">
             {status === 'success' ? (
