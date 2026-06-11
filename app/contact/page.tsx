@@ -9,7 +9,6 @@ import {
   Check,
   AlertCircle,
   Instagram,
-  Facebook,
 } from 'lucide-react'
 import { trackEvent } from '@/lib/analytics'
 
@@ -179,12 +178,12 @@ export default function ContactPage() {
   <div className="mt-3 flex gap-5">
     <div className="mt-3 flex gap-5">
   <a href="https://www.instagram.com/veloramedicalinstitute" target="_blank">
-    <Instagram size={28} />
-  </a>
+  <Instagram size={28} />
+</a>
 
-  <a href="https://www.facebook.com/veloramedicalinstitute" target="_blank">
-    <Facebook size={28} />
-  </a>
+<a href="https://www.facebook.com/veloramedicalinstitute" target="_blank">
+  Facebook
+</a>
 </div>
 </div>
           {/* RIGHT — form */}
