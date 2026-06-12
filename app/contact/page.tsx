@@ -8,7 +8,7 @@ import {
   Clock,
   Check,
   AlertCircle,
-  Instagram,
+  
 } from 'lucide-react'
 import { trackEvent } from '@/lib/analytics'
 
