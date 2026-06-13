@@ -384,7 +384,7 @@ export default function AboutPage() {
               </Link>
 
               <Link
-  href="/program"
+  href="/pricing"
                 className="group relative bg-cream rounded-2xl p-7 md:p-8 flex flex-col justify-between min-h-[200px] transition-all border border-line/70 hover:border-brown/60 shadow-[0_22px_45px_-25px_rgba(74,52,28,0.35)]"
               >
                 <div>
