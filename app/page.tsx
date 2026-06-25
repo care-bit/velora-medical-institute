@@ -86,7 +86,7 @@ export default function HomePage() {
             />
             {/* Clickable hotspots over the A and B cards (image is portrait) */}
             <Link
-              href="https://ehr.charmtracker.com/publicCal.sas?method=getCal&digest=169f4dd01960b6c347cce5b694b4ef068939d9c126dfbd091753f82206e0aa9e4b5cb98c3566431f7b16a2ad35a972fba0ae868b6eb0918a"
+              href="https://ehr.charmtracker.com/publicCal.sas?method=getCal&digest=169f4dd01960b6c31cb1f577544c70e574ed96d3d580cebc1192a3b4b068b2f4c791341ca9a05ba47b16a2ad35a972fba0ae868b6eb0918a"
               aria-label="Book Initial Consultation"
               className="absolute left-[28%] top-[15.5%] w-[44%] h-[5%] rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-brown"
             />
